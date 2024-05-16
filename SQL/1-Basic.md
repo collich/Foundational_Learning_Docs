@@ -54,3 +54,41 @@ VALUES
     ('Delhi', 'India', 1234567, 6728),
     ('Texas', 'USA', 29387728, 2937);
 ```
+
+## Math Operations
+- **Add**: `+`
+- **Subtract**: `-`
+- **Multiply**: `*`
+- **Division**: `/`
+- **Exponent**: `^`
+- **Square Root**: `|/`
+- **Absolute Value**: `@`
+- **Remainder**: `%`
+
+`Format`:
+```sql
+SELECT <column> <operand> <column> AS <new_column_name> FROM <table_name>;
+```
+
+`Example`:
+```sql
+SELECT name, population / area AS population_per_area FROM cities;
+```
+
+## String Operations
+- **Join two strings**: `||`
+- **Concatenate**: `CONCAT()`
+- **Lower**: `LOWER()`
+- **Upper**: `UPPER()`
+- **Length**: `LENGTH()`
+
+`Format`:
+```sql
+SELECT Function(<column>) AS <new_column_name> FROM <table_name>;
+```
+
+`Example`:
+```sql
+SELECT UPPER(CONCAT(name, ', ', country)) AS location FROM cities;
+```
+
