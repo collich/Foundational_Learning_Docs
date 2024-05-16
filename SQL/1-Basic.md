@@ -92,3 +92,25 @@ SELECT Function(<column>) AS <new_column_name> FROM <table_name>;
 SELECT UPPER(CONCAT(name, ', ', country)) AS location FROM cities;
 ```
 
+## Query
+How `PostgreSQL` use our statement to query:
+
+![PostgreSQL Logic](images/postgresql_logic.png)
+
+1. `FROM` the datasource
+2. `WHERE` conditions to query
+3. `SELECT` which column from the data source
+
+`Format`:
+```sql
+SELECT <column>  
+FROM <table_name> 
+WHERE <conditions>;
+```
+
+`Example`:
+```sql
+SELECT name
+FROM cities
+WHERE areas > 4000;
+```
