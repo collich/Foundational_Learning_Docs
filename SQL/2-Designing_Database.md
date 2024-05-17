@@ -60,7 +60,7 @@ CREATE TABLE photos (
 
 ## Joining Table
 
-We can join 2 or more tables together based on their references
+We can join 2 or more tables together based on their references. We can add the 2 keywords `JOIN` and `ON`:
 
 `Format Join`:
 
