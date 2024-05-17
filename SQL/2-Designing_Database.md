@@ -77,3 +77,18 @@ SELECT *
 FROM photos
 JOIN users ON photos.user_id = users.id;
 ```
+
+## Deleting with Contraints
+
+We can use contraints to alter the behaviour of our database table. When implementing the table, we can do as followed:
+
+`Example`:
+
+```SQL
+CREATE TABLE IF NOT EXISTS <table> (
+    id SERIAL PRIMARY KEY,
+    <foreign_key_name> <type> REFERENCES <foreign_table>(<column_name>) ON DELETE <constraints>
+);
+```
+
+![Deletion Constraints](images/sql_delete_constraints.png)
