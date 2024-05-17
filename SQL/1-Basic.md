@@ -188,3 +188,23 @@ SELECT name, area
 FROM cities
 WHERE population / area > 1000;
 ```
+
+## Update row
+
+Updating the entry in the table:
+
+`Example`
+
+```SQL
+UPDATE <table>
+SET <value>
+WHERE <condition>
+```
+
+`Format`
+
+```SQL
+UPDATE cities
+SET population = 9999999
+WHERE name = 'Tokyo';
+```
