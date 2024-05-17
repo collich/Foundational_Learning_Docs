@@ -208,3 +208,19 @@ UPDATE cities
 SET population = 9999999
 WHERE name = 'Tokyo';
 ```
+
+## Delete
+
+`Example`
+
+```SQL
+DELETE FROM <table>
+WHERE <condition>
+```
+
+`Format`
+
+```SQL
+DELETE FROM cities
+WHERE name = 'Tokyo';
+```
