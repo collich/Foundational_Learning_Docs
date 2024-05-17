@@ -90,6 +90,47 @@ SELECT <column> <operand> <column> AS <new_column_name> FROM <table_name>;
 SELECT name, population / area AS population_per_area FROM cities;
 ```
 
+### Comparison
+
+For the `WHERE` conditions
+
+- **Values Equal**: `=`
+- **Left Greater than Right**: `>`
+- **Left Smaller than Right**: `<`
+- **Left Greater than or equals to Right**: `>=`
+- **Left Smaller than or equals to Right**: `<=`
+- **Present in the list**: `IN`
+- **Not Present in the list**: `NOT IN`
+- **Between two value**: `BETWEEN`
+- **Not Equal**: `<>`
+- **Not Equal**: `!=`
+
+`Format`:
+
+```sql
+SELECT <columns>
+FROM <table_name>
+WHERE <conditions>
+```
+
+`Example`:
+
+- Between
+
+```sql
+SELECT name, area
+FROM cities
+WHERE area BETWEEN 2000 AND 4000
+```
+
+- In and Not In
+
+```sql
+SELECT name, area
+FROM cities
+WHERE area IN ('Delhi', 'Tokyo');
+```
+
 ## String Operations
 
 - **Join two strings**: `||`
