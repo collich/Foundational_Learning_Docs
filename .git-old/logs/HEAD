@@ -1,0 +1,5 @@
+0000000000000000000000000000000000000000 04dea2537e47b0cba97a311e202f6ff192be052f aadmin <collin-chua@hotmail.com> 1715871256 +0800	commit (initial): first commit
+04dea2537e47b0cba97a311e202f6ff192be052f 0000000000000000000000000000000000000000 aadmin <collin-chua@hotmail.com> 1715871256 +0800	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 04dea2537e47b0cba97a311e202f6ff192be052f aadmin <collin-chua@hotmail.com> 1715871256 +0800	Branch: renamed refs/heads/master to refs/heads/main
+04dea2537e47b0cba97a311e202f6ff192be052f efb2132db18108a2d5dfe1fe22ba9c97e00cddbe aadmin <collin-chua@hotmail.com> 1715871902 +0800	commit: Added the basic of creating table and inserting values
+efb2132db18108a2d5dfe1fe22ba9c97e00cddbe 9920ca85d63942ad1e724f81ca7bdc3e3cb782f8 aadmin <collin-chua@hotmail.com> 1715872422 +0800	commit: Added Math, String Operations

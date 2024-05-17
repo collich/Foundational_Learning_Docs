@@ -1,9 +1,11 @@
 # Basic SQL
 
-## Creating Table:
+## Creating Table
+
 To create a table:
 
 `Format`:
+
 ```sql
 CREATE TABLE <table_name> (
     <attribute_1> <type>
@@ -13,6 +15,7 @@ CREATE TABLE <table_name> (
 ```
 
 `Example`:
+
 ```sql
 CREATE TABLE IF NOT EXISTS cities (
     name VARCHAR(50),
@@ -23,15 +26,20 @@ CREATE TABLE IF NOT EXISTS cities (
 ```
 
 ## Inserting values into the table
+
 To insert values into the table
 
-### Verbose:
+### Verbose
+
 `Format`:
+
 ```sql
 INSERT INTO <table_name> (COLUMN_1, COLUMN_2, COLUMN_3, ...COLUMN_N)
 VALUES ();
 ```
+
 `Example`:
+
 ```sql
 INSERT INTO cities (name, country, population, area)
 VALUES 
@@ -40,13 +48,17 @@ VALUES
     ('Texas', 'USA', 29387728, 2937);
 ```
 
-### Not Verbose:
+### Not Verbose
+
 `Format`:
+
 ```sql
 INSERT INTO <table_name>
 VALUES ();
 ```
+
 `Example`:
+
 ```sql
 INSERT INTO cities
 VALUES 
@@ -56,6 +68,7 @@ VALUES
 ```
 
 ## Math Operations
+
 - **Add**: `+`
 - **Subtract**: `-`
 - **Multiply**: `*`
@@ -66,16 +79,19 @@ VALUES
 - **Remainder**: `%`
 
 `Format`:
+
 ```sql
 SELECT <column> <operand> <column> AS <new_column_name> FROM <table_name>;
 ```
 
 `Example`:
+
 ```sql
 SELECT name, population / area AS population_per_area FROM cities;
 ```
 
 ## String Operations
+
 - **Join two strings**: `||`
 - **Concatenate**: `CONCAT()`
 - **Lower**: `LOWER()`
@@ -83,16 +99,19 @@ SELECT name, population / area AS population_per_area FROM cities;
 - **Length**: `LENGTH()`
 
 `Format`:
+
 ```sql
 SELECT Function(<column>) AS <new_column_name> FROM <table_name>;
 ```
 
 `Example`:
+
 ```sql
 SELECT UPPER(CONCAT(name, ', ', country)) AS location FROM cities;
 ```
 
 ## Query
+
 How `PostgreSQL` use our statement to query:
 
 ![PostgreSQL Logic](images/postgresql_logic.png)
@@ -102,6 +121,7 @@ How `PostgreSQL` use our statement to query:
 3. `SELECT` which column from the data source
 
 `Format`:
+
 ```sql
 SELECT <column>  
 FROM <table_name> 
@@ -109,6 +129,7 @@ WHERE <conditions>;
 ```
 
 `Example`:
+
 ```sql
 SELECT name
 FROM cities
