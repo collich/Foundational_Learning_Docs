@@ -92,7 +92,7 @@ SELECT name, population / area AS population_per_area FROM cities;
 
 ### Comparison
 
-For the `WHERE` conditions
+For the [WHERE](#query) conditions
 
 - **Values Equal**: `=`
 - **Left Greater than Right**: `>`
@@ -175,4 +175,16 @@ WHERE <conditions>;
 SELECT name
 FROM cities
 WHERE areas > 4000;
+```
+
+### Math Operations (For WHERE)
+
+We can use the math operations:
+
+`Example`:
+
+```SQL
+SELECT name, area
+FROM cities
+WHERE population / area > 1000;
 ```
