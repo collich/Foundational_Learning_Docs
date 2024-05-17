@@ -38,3 +38,42 @@ CREATE TABLE users (
     email VARCHAR(50)
 );
 ```
+
+`Format Foreign Key`:
+
+```SQL
+CREATE TABLE photos (
+    id SERIAL PRIMARY KEY,
+    <foreign_key_name> <type> REFERENCES <foreign_table>(<column_name>)
+);
+```
+
+`Example Foreign Key`:
+
+```SQL
+CREATE TABLE photos (
+    id SERIAL PRIMARY KEY,
+    url VARCHAR(200),
+    user_id INT REFERENCES users(id)
+);
+```
+
+## Joining Table
+
+We can join 2 or more tables together based on their references
+
+`Format Join`:
+
+```SQL
+SELECT <column> 
+FROM <Primary_table>
+JOIN <Secondary_table> ON <Primary_table_column> = <Secondary_table_id>;
+```
+
+`Example Join`:
+
+```SQL
+SELECT * 
+FROM photos
+JOIN users ON photos.user_id = users.id;
+```
