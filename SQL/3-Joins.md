@@ -43,3 +43,16 @@ A `FULL JOIN` outputs all entries from both Primary and Secondary Tables.
 
 ![Full Join](images/Full_Join.png)
 > **In this example**, you can see that an entry from the Primary Table, `photos`, and an entry from the Secondary Table, `users`, have `NULL` entry appended next to them.
+
+## Conditionals with Join
+
+It's possible to filter out using the `WHERE` keyword when joining the tables.
+
+`Example`:
+
+```SQL
+SELECT contents, url
+FROM comments AS c
+JOIN photos AS p ON c.photo_id = p.id
+WHERE c.user_id = p.user_id;
+```
