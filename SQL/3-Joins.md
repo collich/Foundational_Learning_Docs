@@ -22,7 +22,7 @@ By default, we're using `INNER JOIN` when using the keyword `JOIN`.
 
 ![Default Inner Join](images/Default_Join.png)
 > [NOTE]
-In this example, since the database can't find any `NULL` user on the users table; The Database would discard the photos entry with a `NULL` reference value.
+> In this example, since the database can't find any `NULL` user on the users table; The Database would discard the photos entry with a `NULL` reference value.
 
 ### `Primary Table Set with Intersect` OR `LEFT JOIN`
 
