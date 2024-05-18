@@ -56,3 +56,18 @@ FROM comments AS c
 JOIN photos AS p ON c.photo_id = p.id
 WHERE c.user_id = p.user_id;
 ```
+
+## Three Way Join
+
+It's possible to have a three way joins. By doing so, our second `JOIN` statement is going to be a more complicated expression.
+
+`Example`:
+
+```SQL
+SELECT contents, url, username
+FROM comments AS c
+JOIN photos AS p ON c.photo_id = p.id
+JOIN users ON users.id = c.user_id AND users.id = p.user_id;
+```
+
+> **In this example**, We want to see the `usernames` of the users who `comments` on their own `photos`.
