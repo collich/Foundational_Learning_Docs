@@ -8,10 +8,10 @@
 
 Understanding the different joins would require `Set Theory` from Discrete Math. So it's highly recommended to understand `Set Theory` before trying to understand.
 
-- **Intersect**: `INNER JOIN`
-- **Primary Table Set with Intersect**: `LEFT JOIN`
-- **Secondary Table Set with Intersect**: `RIGHT JOIN`
-- **Union**: `FULL JOIN`
+- **Intersect**: `INNER JOIN` [Jump to Section](#intersect-or-inner-join)
+- **Primary Table Set with Intersect**: `LEFT JOIN` [Jump to Section](#primary-table-set-with-intersect-or-left-join)
+- **Secondary Table Set with Intersect**: `RIGHT JOIN` [Jump to Section](#secondary-table-set-with-intersect-or-right-join)
+- **Union**: `FULL JOIN` [Jump to Section](#union-or-full-join)
 
 ![W3 JOIN Tutorials](images/set_theory_join.png)
 Diagram from [W3 SQL](https://www.w3schools.com/sql/sql_join.asp).
@@ -30,7 +30,7 @@ It is when the database outputs all the entries from the Primary Table using `LE
 ![Left Join](images/Left_Join.png)
 In this example, the Primary table is the `photos` with an entry with a reference value of `NULL`. The database would not discard the value rather, it would "append" a `NULL` entry.
 
-### `Primary Table Set with Intersect` OR `RIGHT JOIN`
+### `Secondary Table Set with Intersect` OR `RIGHT JOIN`
 
 The database would output all the entries from the Secondary table even when it doesn't have any entries in the primary table.
 
