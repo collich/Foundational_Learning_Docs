@@ -79,3 +79,20 @@ SELECT user_id, COUNT(*)
 FROM comments
 GROUP BY user_id
 ```
+
+## Having
+
+Much like `WHERE`, `HAVING` is usually group with `GROUP BY` (no pun intended). `HAVING` is more of a filter for set of groups while `WHERE` is filtering the set of rows.
+
+![keyword with having](images/keyword_specific_order.png)
+
+**Example Question**:
+Find the `number of comments` for each photo where the `photo_id is less than 3` and the `photo has more than 2 comments`
+
+```SQL
+SELECT photo_id, COUNT(*)
+FROM comments
+WHERE photo_id < 3
+GROUP BY photo_id
+HAVING COUNT(*) > 2;
+```
