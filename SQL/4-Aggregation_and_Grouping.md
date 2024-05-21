@@ -1,11 +1,11 @@
 # Grouping and Aggregation
 
-- Grouping:
+- `Grouping`:
   - Reduces many rows down to fewer rows.
   - Done by using the `GROUP BY` keyword.
   - Visualizing the result is key to use.
 
-- Aggregates:
+- `Aggregates`:
   - Reduces many value down to one
   - Done by using `aggregate functions`
 
@@ -58,7 +58,24 @@ FROM comments
 `Example`:
 
 ```SQL
-SELECT COUNT(contents), user_id
+SELECT COUNT(id), user_id
+FROM comments
+GROUP BY user_id
+```
+
+`Visualisation`:
+![count and group by](images/count_and_group_by.png)
+
+> **NOTE**: Corner cases for COUNT() exists. Read the next section for information.
+
+#### COUNT corner case
+
+`COUNT` doesn't count the entry with a null value. To counter this, use `COUNT(*)`.
+
+`Example`:
+
+```SQL
+SELECT user_id, COUNT(*)
 FROM comments
 GROUP BY user_id
 ```
