@@ -100,3 +100,19 @@ LIMIT 5;
 ```
 
 > **This example shows** only the first `5 rows` from our `users` table.
+
+## OFFSET and LIMIT
+
+We are not limited to using only one or the other, we can use both `OFFSET` and `LIMIT` together.
+
+`Example`:
+
+```SQL
+SELECT *
+FROM products
+ORDER BY price DESC
+LIMIT 5
+OFFSET 1;
+```
+
+> **In this example**, we skip the most expensive product, then limit to 5 rows of the most expensive product, then skip the most expensive product. **The order of LIMIT and OFFSET doesn't matter. By convention, we will use LIMIT THEN OFFSET**.
