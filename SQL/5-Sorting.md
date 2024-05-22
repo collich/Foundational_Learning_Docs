@@ -80,3 +80,23 @@ OFFSET 40;
 > **This example shows** us rows 41 and beyond.
 
 ## LIMIT
+
+We can use `LIMIT` to select the first few rows by adding a number in front of the keyword.
+
+`Format`:
+
+```SQL
+SELECT <column>
+FROM <table>
+LIMIT <number>;
+```
+
+`Example`:
+
+```SQL
+SELECT *
+FROM users
+LIMIT 5;
+```
+
+> **This example shows** only the first `5 rows` from our `users` table.
