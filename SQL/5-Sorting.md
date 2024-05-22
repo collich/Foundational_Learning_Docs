@@ -1,9 +1,11 @@
 # Sorting
 
-`ORDER BY` is the keyword to sort the entries in SQL.
+- `ORDER BY` is the keyword to sort the entries in SQL:
+  - [`Descending`](#decending): From highest to lowest, we use the `DESC` keyword.
+  - [`Ascending`](#ascending): From lowest to highest, we use the `ASC` keyword.
 
-- [`Descending`](#decending): From highest to lowest, we use the `DESC` keyword.
-- [`Ascending`](#ascending): From lowest to highest, we use the `ASC` keyword.
+- [`OFFSET`](#offset): Skip the first `n` number of rows of the result set.
+- [`LIMIT`](#limit): Only give the first `n` number of rows of the result set.
 
 ## The two variations
 
@@ -54,3 +56,27 @@ ORDER BY price ASC, weight ASC;
 ```
 
 > **In this example**, we want to sort the products from the price as our first criteria. But if there are entries that are of same `price` by `ascending` order, we use the `weight` as the next factor by sorting in a `descending` order.
+
+## OFFSET
+
+We can use `OFFSET` to skip the first few rows by adding a number in front of the keyword.
+
+`Format`:
+
+```SQL
+SELECT <column>
+FROM <table>
+OFFSET <number>;
+```
+
+`Example`:
+
+```SQL
+SELECT *
+FROM users
+OFFSET 40;
+```
+
+> **This example shows** us rows 41 and beyond.
+
+## LIMIT
