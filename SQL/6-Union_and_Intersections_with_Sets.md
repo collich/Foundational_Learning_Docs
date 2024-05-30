@@ -25,7 +25,6 @@ LIMIT <to_the_number_of_rows>
 )
 ```
 
-
 `Example`:
 
 ```SQL
