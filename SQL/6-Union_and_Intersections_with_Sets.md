@@ -2,6 +2,9 @@
 
 - [`UNION`](#union) - Set Theory of `Union`. Include the whole of two table.
 - [`INTERSECT`](#intersect) - Set Theory of `Intersect`. Include only the same value between two table.
+- `Except` - Set Theory of . Only Left Table without the intercept.
+
+![Union and Intersect](images/pgsql_union_intercept.png)
 
 ## UNION
 
