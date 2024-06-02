@@ -2,7 +2,7 @@
 
 - [`UNION`](#union) - Set Theory of `Union`. Include the whole of two table.
 - [`INTERSECT`](#intersect) - Set Theory of `Intersect`. Include only the same value between two table.
-- `Except` - Set Theory of . Only Left Table without the intercept.
+- [`Except`](#except) - Set Theory of . Only Left Table without the intercept.
 
 ![Union and Intersect](images/pgsql_union_intercept.png)
 
@@ -86,3 +86,25 @@ SELECT * FROM products
 > Also besure that UNION columns have the same data types otherwise it wouldn't work.
 
 ## INTERSECT
+
+The `INTERSECT` keyword will give the common entries that are in both queeries.
+
+`Example`:
+
+```SQL
+(
+SELECT *
+FROM products
+ORDER BY price DESC
+LIMIT 4
+)
+INTERSECT
+(
+SELECT *
+FROM products
+ORDER BY price / weight DESC
+LIMIT 4
+)
+```
+
+## EXCEPT
