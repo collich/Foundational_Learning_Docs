@@ -71,4 +71,18 @@ LIMIT 4
 )
 ```
 
+### Best practice
+
+Best practice for complex `UNION` query is to have `parenthesis` around the two queries as shown in the earlier sections examples.
+
+For simple query, it's okay to not have `parenthesis` around them:
+
+```SQL
+SELECT * FROM products
+UNION
+SELECT * FROM products
+```
+
+> Also besure that UNION columns have the same data types otherwise it wouldn't work.
+
 ## INTERSECT
