@@ -2,7 +2,7 @@
 
 - [`UNION`](#union) - Set Theory of `Union`. Include the whole of two table.
 - [`INTERSECT`](#intersect) - Set Theory of `Intersect`. Include only the same value between two table.
-- [`Except`](#except) - Set Theory of . Only Left Table without the intercept.
+- [`Except`](#except) - Set Theory of `P(A - B)`. Only Left Table without the intercept.
 
 ![Union and Intersect](images/pgsql_union_intercept.png)
 
@@ -108,3 +108,25 @@ LIMIT 4
 ```
 
 ## EXCEPT
+
+For this `EXCEPT` keyword, we're trying to query the `Left Table/ Primary Table` where the entries doesn't appear on the `Right table/ Secondary table`.
+
+`Example`:
+
+```SQL
+-- Left Table/ Primary Table
+(
+SELECT *
+FROM products
+ORDER BY price DESC
+LIMIT 4
+)
+EXCEPT
+-- Right Table/ Secondary Table
+(
+SELECT *
+FROM products
+ORDER BY price / weight DESC
+LIMIT 4
+)
+```
