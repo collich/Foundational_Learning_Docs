@@ -48,4 +48,27 @@ LIMIT 4
 
 > **In this example:** we're trying to find out the first four rows of the highest price **AND** the highest price per weight entries.
 
+### Without removing duplicates
+
+If we don't want to remove duplicates in our `UNION` query, we use the `ALL` keyword with `UNION`.
+
+`Example`:
+
+```SQL
+(
+SELECT *
+FROM products
+ORDER BY price DESC
+LIMIT 4
+)
+-- Added the `ALL` keyword
+UNION ALL
+(
+SELECT *
+FROM products
+ORDER BY price / weight DESC
+LIMIT 4
+)
+```
+
 ## INTERSECT
