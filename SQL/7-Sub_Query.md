@@ -46,4 +46,36 @@ Here we will try to understand the `Shape of Data`.
 
 ## Different Locations
 
+- [`SELECT`](#select)
+- [`FROM`](#from)
+- [`WHERE`](#where)
+
 ![subquery example](images/subquery.png)
+
+### SELECT
+
+For subquery to be in `SELECT`, we have to ensure that the sub query only returns a *`Scalar Query`*.
+
+*`Scalar Query`*:
+
+```SQL
+SELECT MAX(price)
+FROM products
+```
+
+`Sub Query`:
+
+```SQL
+SELECT name, price, (
+    SELECT MAX(price)
+    FROM products
+    )
+FROM products
+WHERE price > 876
+```
+
+![select subquery](images/select_subquery.png)
+
+### FROM
+
+### WHERE
