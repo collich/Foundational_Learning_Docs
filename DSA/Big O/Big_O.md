@@ -36,3 +36,7 @@
 - `Allocations`
 
 > Information from `ZTM`
+
+## Complexity Chart
+
+![Big O Chart](../images/big_o.png)
