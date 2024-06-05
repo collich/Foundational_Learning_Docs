@@ -2,7 +2,7 @@
 
 **Different Big Os**:
 
-- `O(1)` - **Constant**: no loops.
+- [`O(1)`](#o1) - **Constant**: no loops.
 - [`O(n)`](#on) - **Linear**: for loops, while loops through n items.
 - `O(log N)` - **Logarithmic**: usually searching algorithms have log n if they are sorted (Binary Search).
 - `O(n log(n))` - **Log Linear**: usually sorting operations.
@@ -65,4 +65,23 @@ for (_, item := range list){
 # For Loop
 for i in list:
     print(i)
+```
+
+## O(1)
+
+It's `Constant Time` complexity. Basically it's just a simple line of code.
+
+`Go` Code:
+
+```GO
+func PrintItem(item){
+    fmt.print(item)
+}
+```
+
+`Python` Code:
+
+```Python
+def print_item(item):
+    print(item)
 ```
