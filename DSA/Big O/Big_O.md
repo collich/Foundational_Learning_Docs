@@ -3,7 +3,7 @@
 **Different Big Os**:
 
 - `O(1)` - **Constant**: no loops.
-- `O(n)` - **Linear**: for loops, while loops through n items.
+- [`O(n)`](#on) - **Linear**: for loops, while loops through n items.
 - `O(log N)` - **Logarithmic**: usually searching algorithms have log n if they are sorted (Binary Search).
 - `O(n log(n))` - **Log Linear**: usually sorting operations.
 - `O(n^2)` - **Quadratic**: every element in a collection needs to be compared to ever other element. Two nested loops.
@@ -40,3 +40,29 @@
 ## Complexity Chart
 
 ![Big O Chart](../images/big_o.png)
+
+## O(n)
+
+It is a `Linear Time` complexity.
+
+- Basically if `n=4`, the program will loop `4` times.
+- If `n=5`, then it'll loop `5` times.
+
+If we were to plot it in a graph, it will be linear.
+
+`Go` Code:
+
+```GO
+// For each
+for (_, item := range list){
+    fmt.Println(item)
+}
+```
+
+`Python` Code:
+
+```Python
+# For Loop
+for i in list:
+    print(i)
+```
