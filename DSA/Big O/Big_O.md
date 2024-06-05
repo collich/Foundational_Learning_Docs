@@ -71,6 +71,8 @@ for i in list:
 
 It's `Constant Time` complexity. Basically it's just a simple line of code.
 
+If we were to plot it in a graph, it will be a flat horizontal line.
+
 `Go` Code:
 
 ```GO
@@ -85,3 +87,20 @@ func PrintItem(item){
 def print_item(item):
     print(item)
 ```
+
+## Simplifying Big O
+
+We can simplify Big O notations by using 4 rules:
+
+1. [`Worst Case`](#rule-1-worst-case)
+2. [`Remove Constants`](#rule-2-remove-constants)
+3. [`Different terms of inputs`](#rule-3-different-terms-of-inputs)
+4. [`Drop Non Dominants`](#rule-4-drop-non-dominants)
+
+### Rule 1: Worst Case
+
+### Rule 2: Remove Constants
+
+### Rule 3: Different terms of inputs
+
+### Rule 4: Drop Non Dominants
