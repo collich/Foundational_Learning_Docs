@@ -3,6 +3,10 @@
 - [`Introduction`](#introduction): Introduction to subquery in a query by using `parenthesis`.
 - [`Structure of Data`](#structure-of-data): Imagining data as an object with attributes to figure out the output of data
 - [`Different locations of subqueries`](#different-locations): Showing different locations that the subqueries can be written at.
+  - [`SELECT`](#select)
+  - [`FROM`](#from)
+  - [`JOIN`](#join)
+  - [`WHERE`](#where)
 
 ## Introduction
 
@@ -48,6 +52,7 @@ Here we will try to understand the `Shape of Data`.
 
 - [`SELECT`](#select)
 - [`FROM`](#from)
+- [`JOIN`](#join)
 - [`WHERE`](#where)
 
 ![subquery example](images/subquery.png)
@@ -110,5 +115,9 @@ FROM (
 ```
 
 ![from subquery](images/from_subquery.png)
+
+### JOIN
+
+![join subquery](images/join_subquery.png)
 
 ### WHERE
