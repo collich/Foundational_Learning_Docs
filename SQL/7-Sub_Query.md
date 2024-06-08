@@ -63,12 +63,14 @@ For subquery to be in `SELECT`, we have to ensure that the sub query only return
 
 *`Scalar Query`*:
 
+`Sub Query`:
+
 ```SQL
 SELECT MAX(price)
 FROM products
 ```
 
-`Sub Query`:
+`Full Query`
 
 ```SQL
 SELECT name, price, (
@@ -87,12 +89,14 @@ For subquery to be in `FROM`:
 
 - Must have an alias applied to it.
 
+`Sub Query`:
+
 ```SQL
 SELECT name, price_weight_ratio
 FROM products
 ```
 
-`Sub Query`:
+`Full Query`:
 
 ```SQL
 SELECT name, price_weight_ratio
@@ -117,6 +121,32 @@ FROM (
 ![from subquery](images/from_subquery.png)
 
 ### JOIN
+
+For subquery to be in `JOIN`:
+
+- Subquery must return data compatible with the `ON` clause.
+- Not really useful
+
+`Sub Query`:
+
+```SQL
+SELECT user_id
+FROM orders
+WHERE product_id = 3
+```
+
+`Full Query`:
+
+```SQL
+SELECT first_name
+FROM users
+JOIN (
+    SELECT user_id
+    FROM orders
+    WHERE product_id = 3
+) AS o
+ON o.user_id = users.id
+```
 
 ![join subquery](images/join_subquery.png)
 
