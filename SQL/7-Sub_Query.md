@@ -54,7 +54,7 @@ Here we will try to understand the `Shape of Data`.
 
 ### SELECT
 
-For subquery to be in `SELECT`, we have to ensure that the sub query only returns a *`Scalar Query`*.
+For subquery to be in `SELECT`, we have to ensure that the sub query only returns a *`Scalar Query(One value)`*.
 
 *`Scalar Query`*:
 
@@ -77,5 +77,38 @@ WHERE price > 876
 ![select subquery](images/select_subquery.png)
 
 ### FROM
+
+For subquery to be in `FROM`:
+
+- Must have an alias applied to it.
+
+```SQL
+SELECT name, price_weight_ratio
+FROM products
+```
+
+`Sub Query`:
+
+```SQL
+SELECT name, price_weight_ratio
+FROM (
+    SELECT name, price / weight AS price_weight_ratio
+    FROM products
+) AS p
+WHERE price > 876
+```
+
+`Use Case` - Finding average per user:
+
+```SQL
+SELECT AVG(p.order_count)
+FROM (
+    SELECT user_id, COUNT(*) AS order_count
+    FROM products
+    GROUP BY user_id
+) AS p
+```
+
+![from subquery](images/from_subquery.png)
 
 ### WHERE
