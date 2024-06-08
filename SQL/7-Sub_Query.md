@@ -125,7 +125,7 @@ FROM (
 For subquery to be in `JOIN`:
 
 - Subquery must return data compatible with the `ON` clause.
-- Not really useful
+- **Not really useful**.
 
 `Sub Query`:
 
@@ -148,6 +148,17 @@ JOIN (
 ON o.user_id = users.id
 ```
 
+> Not very useful and can be rewritten in a simpler form:
+
+```SQL
+SELECT first_name
+FROM users
+JOIN orders ON orders.user_id = users.id
+WHERE orders.product_id = 3
+```
+
 ![join subquery](images/join_subquery.png)
 
 ### WHERE
+
+![where subquery](images/where_subqueries.png)
