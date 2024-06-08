@@ -161,4 +161,43 @@ WHERE orders.product_id = 3
 
 ### WHERE
 
+`Sub Query`:
+
+```SQL
+SELECT id
+FROM products
+WHERE price / weight > 50
+```
+
+`Full Query`:
+
+```SQL
+SELECT id
+FROM orders
+WHERE product_id IN (
+    SELECT id
+    FROM products
+    WHERE price / weight > 50
+)
+```
+
+> You can also use a join clause instead of a subquery for this example.
+
+### Operators for the where clause
+
+This sub section is dedicated to the operators that can be used and what type of data structure `PGSQL` expects from the operator:
+
+```SQL
+SELECT <column>
+FROM <table>
+-- The Operator that is in the where clause below.
+WHERE <condition_column> <*Operator*> (
+    SELECT <column>
+    FROM <table>
+    WHERE <condition>
+)
+```
+
+![where subquery operators](images/where_subqueries_operators.png)
+
 ![where subquery](images/where_subqueries.png)
