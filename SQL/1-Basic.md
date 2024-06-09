@@ -224,3 +224,5 @@ WHERE <condition>
 DELETE FROM cities
 WHERE name = 'Tokyo';
 ```
+
+Next Topic: [Topic 2 - Designing Database](2-Designing_Database.md)
