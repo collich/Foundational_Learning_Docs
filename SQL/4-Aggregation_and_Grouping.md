@@ -1,5 +1,15 @@
 # Grouping and Aggregation
 
+Sections:
+
+- [`Overview`](#overview)
+- [`Grouping`](#grouping)
+- [`Aggregation`](#aggregation)
+- [`Having`](#having-keyword)
+- [`End`](#end)
+
+## Overview
+
 - `Grouping`:
   - Reduces many rows down to fewer rows.
   - Done by using the `GROUP BY` keyword.
@@ -80,7 +90,7 @@ FROM comments
 GROUP BY user_id
 ```
 
-## Having
+## HAVING Keyword
 
 Much like `WHERE`, `HAVING` is usually group with `GROUP BY` (no pun intended). `HAVING` is more of a filter for set of groups while `WHERE` is filtering the set of rows.
 
@@ -96,3 +106,9 @@ WHERE photo_id < 3
 GROUP BY photo_id
 HAVING COUNT(*) > 2;
 ```
+
+## End
+
+Previous Topic: [Topic 3 - Joins](3-Joins.md)
+
+Next Topic: [Topic 5 - Sorting](5-Sorting.md)

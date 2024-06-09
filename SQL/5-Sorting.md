@@ -1,5 +1,16 @@
 # Sorting
 
+Sections:
+
+- [`Overview`](#overview)
+- [`Two Variations`](#the-two-variations)
+- [`OFFSET`](#offset)
+- [`LIMIT`](#limit)
+- [`OFFSET and LIMIT`](#offset-and-limit)
+- [`End`](#end)
+
+## Overview
+
 - `ORDER BY` is the keyword to sort the entries in SQL:
   - [`Descending`](#decending): From highest to lowest, we use the `DESC` keyword.
   - [`Ascending`](#ascending): From lowest to highest, we use the `ASC` keyword.
@@ -116,3 +127,9 @@ OFFSET 1;
 ```
 
 > **In this example**, we skip the most expensive product, then limit to 5 rows of the most expensive product, then skip the most expensive product. **The order of LIMIT and OFFSET doesn't matter. By convention, we will use LIMIT THEN OFFSET**.
+
+## End
+
+Previous Topic: [Topic 4 - Aggregation and Grouping](4-Aggregation_and_Grouping.md)
+
+Next Topic: [Topic 6 - Union and Intersections](6-Union_and_Intersections_with_Sets.md)

@@ -1,5 +1,13 @@
 # A Comprehensive Join Documentation
 
+Sections:
+
+- [`Notes of Joins`](#some-notes-on-joins)
+- [`Different types of SQL Join`](#different-types-of-sql-joining-table)
+- [`Conditionals with Join`](#conditionals-with-join)
+- [`Three Way Join`](#three-way-join)
+- [`End`](#end)
+
 ## Some Notes on Joins
 
 ![Some notes of join](images/notes_on_joins.png)
@@ -71,3 +79,9 @@ JOIN users ON users.id = c.user_id AND users.id = p.user_id;
 ```
 
 > **In this example**, We want to see the `usernames` of the users who `comments` on their own `photos`.
+
+## End
+
+Previous Topic: [Topic 2 - Designing Database](2-Designing_Database.md)
+
+Next Topic: [Topic 4 - Aggregation and Grouping](4-Aggregation_and_Grouping.md)

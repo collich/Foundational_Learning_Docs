@@ -1,5 +1,13 @@
 # Designing Database
 
+Sections:
+
+- [`Relationships`](#relationships)
+- [`Keys`](#keys)
+- [`Joining Table`](#joining-table)
+- [`Deleting Constrains`](#deleting-with-contraints)
+- [`End`](#end)
+
 ## Relationships
 
 There are 4 types of relationship:
@@ -92,3 +100,9 @@ CREATE TABLE IF NOT EXISTS <table> (
 ```
 
 ![Deletion Constraints](images/sql_delete_constraints.png)
+
+## End
+
+Previous Topic: [Topic 1 - Basic](1-Basic.md)
+
+Next Topic: [Topic 3 - Joins](3-Joins.md)

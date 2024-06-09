@@ -1,5 +1,7 @@
 # Sub-Query
 
+Sections:
+
 - [`Introduction`](#introduction): Introduction to subquery in a query by using `parenthesis`.
 - [`Structure of Data`](#structure-of-data): Imagining data as an object with attributes to figure out the output of data
 - [`Different locations of subqueries`](#different-locations): Showing different locations that the subqueries can be written at.
@@ -7,6 +9,7 @@
   - [`FROM`](#from)
   - [`JOIN`](#join)
   - [`WHERE`](#where)
+- [`End`](#end)
 
 ## Introduction
 
@@ -201,3 +204,9 @@ WHERE <condition_column> <*Operator*> (
 ![where subquery operators](images/where_subqueries_operators.png)
 
 ![where subquery](images/where_subqueries.png)
+
+## End
+
+Previous Topic: [Topic 6 - Union and Intersections](6-Union_and_Intersections_with_Sets.md)
+
+<!-- Next Topic: [Topic -]() -->

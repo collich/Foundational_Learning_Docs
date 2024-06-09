@@ -1,5 +1,16 @@
 # Basic SQL
 
+Sections:
+
+- [`Creating Table`](#creating-table)
+- [`Inserting values into the table`](#inserting-values-into-the-table)
+- [`Math Operations`](#math-operations)
+- [`String Operations`](#string-operations)
+- [`Query`](#query)
+- [`Update Row`](#update-row)
+- [`Delete`](#delete)
+- [`End`](#end)
+
 ## Creating Table
 
 To create a table:
@@ -224,5 +235,7 @@ WHERE <condition>
 DELETE FROM cities
 WHERE name = 'Tokyo';
 ```
+
+## End
 
 Next Topic: [Topic 2 - Designing Database](2-Designing_Database.md)

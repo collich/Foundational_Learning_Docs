@@ -1,8 +1,11 @@
 # Union and Intersection
 
+Sections:
+
 - [`UNION`](#union) - Set Theory of `Union`. Include the whole of two table.
 - [`INTERSECT`](#intersect) - Set Theory of `Intersect`. Include only the same value between two table.
 - [`Except`](#except) - Set Theory of `P(A - B)`. Only Left Table without the intercept.
+- [`End`](#end)
 
 ![Union and Intersect](images/pgsql_union_intercept.png)
 
@@ -130,3 +133,9 @@ ORDER BY price / weight DESC
 LIMIT 4
 )
 ```
+
+## End
+
+Previous Topic: [Topic 5 - Sorting](5-Sorting.md)
+
+Next Topic: [Topic 7 - Sub Query](7-Sub_Query.md)
