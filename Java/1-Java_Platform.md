@@ -12,3 +12,5 @@ Then afterwards, the **Bytecode** would be process by **JVM** to convert it into
 What happens during *Execution* and *Compilation* Time?
 
 > During Execution, the **JVM** is used. During Compilation, Java Code is being compiled to **Bytecode**
+
+## JDK vs JRE vs JVM
