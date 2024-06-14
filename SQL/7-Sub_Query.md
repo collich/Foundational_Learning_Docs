@@ -211,6 +211,20 @@ The **subquery value** must return in use of `Operator`:
 
 - **Single value**: `>`, `<`, `>=`, `<=`, `=`.
 
+`Example`:
+
+```SQL
+SELECT *
+FROM products
+WHERE price > (
+    SELECT AVG(price)
+    FROM products
+)
+ORDER BY price DESC;
+```
+
+> In this example, we're trying to get the products that are greater than the average price in the overall catalog in a decending order.
+
 ## End
 
 Previous Topic: [Topic 6 - Union and Intersections](6-Union_and_Intersections_with_Sets.md)
