@@ -190,20 +190,26 @@ WHERE product_id IN (
 
 This sub section is dedicated to the operators that can be used and what type of data structure `PGSQL` expects from the operator:
 
+![where subquery](images/where_subqueries.png)
+
 ```SQL
 SELECT <column>
 FROM <table>
 -- The Operator that is in the where clause below.
-WHERE <condition_column> <*Operator*> (
+WHERE <column> <*Operator*> (
     SELECT <column>
     FROM <table>
     WHERE <condition>
 )
 ```
 
+There are different data structures for the Operator:
+
 ![where subquery operators](images/where_subqueries_operators.png)
 
-![where subquery](images/where_subqueries.png)
+The **subquery value** must return in use of `Operator`:
+
+- **Single value**: `>`, `<`, `>=`, `<=`, `=`.
 
 ## End
 
