@@ -51,3 +51,17 @@ int eight = 010;
 // Will store int 16 in variable sixteen
 int sixteen = 0x10;
 ```
+
+## Floating Points and BigDecimal
+
+In Java, when adding floating point value together, the result won't be accurate. To solve this, we use the class `BigDecimal`.
+
+```Java
+34.56789876 + 34.2234 // this will result 68.79129875999999
+
+BigDecimal number1 = new BigDecimal("34.56789876");
+BigDecimal number2 = new BigDecimal("34.2234");
+number1.add(number2); // will result in accurate result 68.79129876
+```
+
+> In order to do operations with `BigDecimal`, you would have to create the number into `BigDecimal` as well.
