@@ -65,3 +65,21 @@ number1.add(number2); // will result in accurate result 68.79129876
 ```
 
 > In order to do operations with `BigDecimal`, you would have to create the number into `BigDecimal` as well.
+
+## Boolean
+
+- `OR`: `||`
+- `AND`: `&&`
+- `XOR`: `^` (When both operand is different)
+
+## Character
+
+In Java to assign a character, use single parenthesis `''`. We can represent character in `Unicode` as well.
+
+```Java
+//ASCII, will give a value of 97 when changing the type to int
+char ch = 'a';
+
+// Unicode, will give a value of ' "" '
+char ch2 = '\u0022'
+```
