@@ -34,3 +34,20 @@ i = (int) l
 // Implicit from int to long. Small to big.
 l = i
 ```
+
+## Integer Data Types
+
+There are 2 special types that are unique to `Integer`.
+
+- `Octal`
+- `Hexadecimal`: [0-9] to [A - F]
+
+```Java
+//Octal
+// Will store int 8 in variable eight
+int eight = 010;
+
+// Hexadecimal
+// Will store int 16 in variable sixteen
+int sixteen = 0x10;
+```
