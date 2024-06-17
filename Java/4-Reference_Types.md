@@ -73,3 +73,12 @@ Integer i4 = Integer.valueOf(5);
 i1 == i2;// false
 i3 == i4;// true
 ```
+
+### Autoboxing
+
+```Java
+Integer seven = Integer.valueOf(7);
+Integer sevenAgain = 7; // Same as Integer.valueOf. Auto boxing.
+
+seven == sevenAgain;// true
+```
