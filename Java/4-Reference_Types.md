@@ -17,3 +17,45 @@ Animal cat = new Animal("cat");
 ```
 
 > The variable `cat` is being referenced/pointed to the heap object.
+
+## String Reference class
+
+String is immutable by default.
+
+Some useful methods for `String` class:
+
+- `String.join("",i)`: Changes from `Arrays` to `String`
+- `i.split("")`: Splits the `String` into `Arrays`
+
+### StringBuffer and StringBuilder
+
+Since Strings are immutable, we can use `StringBuilder` or `StringBuilder` to do changes in our `Strings`.
+
+`StringBuffer` is a synchronise class, this means it's ready for multi-threading. Use `StringBuffer` when you want to use *multi-thread*.
+
+`StringBuilder` is much better for *single-thread*.
+
+## Wrapper Classes
+
+- A `Wrapper Class` wraps (encloses) around a data type and gives it an object appearance
+- `Wrapper Classes` are final and immutable.
+
+Types:
+
+- `Wrapper`: Boolean, Byte, Character, Double, Float, Integer, Long, Short
+- `Primitive`: boolean, byte, character, double, float, integer, long, short
+
+`Wrapper Classes` offers more **utility** to the standard `Primitive` types.
+
+```Java
+Integer hundred = Integer.valueOf("100");
+Boolean value = Boolean.valueOf("True");
+
+
+// Utility Methods
+Float floatWrapper = Float.valueOf(57.0f);
+int floatToInt = floatWrapper.intValue();//57
+
+Integer seven = Integer.valueOf("111", 2);// Binary of 7
+Integer.toString(seven, 2);
+```
