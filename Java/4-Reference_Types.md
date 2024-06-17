@@ -82,3 +82,11 @@ Integer sevenAgain = 7; // Same as Integer.valueOf. Auto boxing.
 
 seven == sevenAgain;// true
 ```
+
+## One more type
+
+There is one more type that is present in Java.
+
+- `LocalDate`
+- `LocalTime`
+- `LocalDateTime`
