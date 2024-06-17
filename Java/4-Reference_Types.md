@@ -48,8 +48,10 @@ Types:
 `Wrapper Classes` offers more **utility** to the standard `Primitive` types.
 
 ```Java
+Integer thousand = new Interger(1000);
 Integer hundred = Integer.valueOf("100");
-Boolean value = Boolean.valueOf("True");
+Boolean value = Boolean.valueOf(true);
+Boolean result = Boolean.valueOf("False");
 
 
 // Utility Methods
@@ -58,4 +60,16 @@ int floatToInt = floatWrapper.intValue();//57
 
 Integer seven = Integer.valueOf("111", 2);// Binary of 7
 Integer.toString(seven, 2);
+```
+
+> Important note on `valueOf`. It's typically recommended to use the `valueOf` method as Java tries to **reuse** the object in memory where as `new Object` will create a new object in memory. for example:
+
+```Java
+Integer i1 = new Integer(5);
+Integer i2 = new Integer(5);
+Integer i3 = Integer.valueOf(5);
+Integer i4 = Integer.valueOf(5);
+
+i1 == i2;// false
+i3 == i4;// true
 ```
