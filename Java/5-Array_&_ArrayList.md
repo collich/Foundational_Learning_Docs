@@ -38,6 +38,10 @@ Array.equals(listArray, listArray1);
 
 To have a number of arguments into a method, we can use `...`.
 
+Things to remember:
+
+- It must be the last parameter to use `Variable Arguments`
+
 ```Java
 void print(int... values){
   System.out.printf(Arrays.toString(values));
