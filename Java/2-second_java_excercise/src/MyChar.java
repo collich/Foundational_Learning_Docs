@@ -43,13 +43,13 @@ public class MyChar {
     }
 
     public void printAllLowerChar(){
-        for (char ch = 'a'; i <= 'z'; ch++) {
+        for (char ch = 'a'; ch <= 'z'; ch++) {
             System.out.println(ch);
         }
     }
 
     public void printAllUpperChar(){
-        for (char ch = 'A'; i <= 'Z'; ch++) {
+        for (char ch = 'A'; ch <= 'Z'; ch++) {
             System.out.println(ch);
         }
     }

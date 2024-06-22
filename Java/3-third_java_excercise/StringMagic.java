@@ -3,9 +3,30 @@ import java.util.Map;
 
 
 public class StringMagic {
-    public static boolean main(String[] args) {
+    public String findLongestWord(String sentence){
+        sentence = sentence.trim();
+        if (sentence.isEmpty()){
+            return "";
+        }
+
+        String longestWord = "";
+        String[] listSent = sentence.split(" ");
+        HashMap<String, Integer> hashSent = new HashMap<String, Integer>();
+        for (String word : listSent) {
+            hashSent.put(word, word.length());
+        }
+
+        for (Map.Entry<String, Integer> entry : hashSent.entrySet()) {
+            
+            if (entry.getValue() > longestWord.length()){
+                longestWord = entry.getKey();
+            }
+        }
+        return longestWord;
+    }
+
+    public boolean duplicateLetters(String str){
         // String str = String.valueOf("Hello World");
-        String str = String.valueOf("");
 
         if (str.isEmpty()){
             return false;

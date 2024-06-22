@@ -16,6 +16,10 @@ public class Student {
         }
     }
 
+    public String getName(){
+        return this.name;
+    }
+
     public int getNumberOfMarks(){
         return this.listOfMarks.size();
     }
