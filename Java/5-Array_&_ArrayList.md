@@ -41,9 +41,34 @@ To have a number of arguments into a method, we can use `...`.
 Things to remember:
 
 - It must be the last parameter to use `Variable Arguments`
+- Arrays are not dynamic:
+  - Can't add or remove elements within the Array.
 
 ```Java
 void print(int... values){
   System.out.printf(Arrays.toString(values));
 }
+```
+
+## ArrayList
+
+This is just the basic of ArrayList. Will go into further details under `Collections` documentation.
+
+```Java
+// Basic way of initialising an ArrayList
+ArrayList<Object> arrayList = new ArrayList<>();
+
+arrayList.add(10);
+arrayList.add("Hello");
+arrayList.add(false);
+```
+
+It is recommended to use types when using `ArrayList`.
+
+```Java
+ArrayList<Integer> arrayList = new ArrayList<Integer>();
+
+arrayList.add(10);
+arrayList.add(20);
+arrayList.add(30);
 ```
