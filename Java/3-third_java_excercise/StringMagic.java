@@ -32,4 +32,22 @@ public class StringMagic {
 
         return moreThanOnce;
     }
+
+    public int getRightmostDigit(String str){       
+        int gotNumbers = -1;
+        
+        if (str.isEmpty()){
+            return gotNumbers;
+        }
+        
+        for (int i = str.length() - 1; i >= 0; i--){
+            Character temp = str.charAt(i);
+            if (Character.isDigit(temp)){
+                gotNumbers = Character.getNumericValue(temp);
+                break;
+            }
+        }
+
+        return gotNumbers;
+    }
 }
