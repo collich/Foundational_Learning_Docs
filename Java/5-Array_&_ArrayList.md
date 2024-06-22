@@ -33,3 +33,13 @@ int[] listArray1 = {100, 100, 100, 100, 100};
 
 Array.equals(listArray, listArray1);
 ```
+
+### Extra - Variable Arguments
+
+To have a number of arguments into a method, we can use `...`.
+
+```Java
+void print(int... values){
+  System.out.printf(Arrays.toString(values));
+}
+```
