@@ -105,6 +105,19 @@ public class Customer {
 
 ## Abstract Classes
 
+Think of `Abstract Classes` like a template or a recipe. Without the ingredients, the food won't be made. Similarly, `Abstract Classes` are just templates/recipe and **Cannot** be instantiated/implemented.
+
+We can use the keyword `abstract`.
+
+```Java
+abstract class Animal {
+    abstract public void makeSound();
+}
+```
+
+> In this case, we've labeled the **class** and **method** as `abstract`. Which means we can't `instantiate` the **class** or `write any code` in the **method**.
+> We would only provide the implemention, **method**, in the `Sub/Child Class`.
+
 ## Interfaces
 
 ## 4 Pillars of OOP
