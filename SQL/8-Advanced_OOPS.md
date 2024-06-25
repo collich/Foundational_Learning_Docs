@@ -50,6 +50,30 @@ public class Fan{
 
 ## Object Composition
 
+It's basically being able to use Object Types as an `Attribute` or `State`. In this sense, it's an Object in an Object. *It describes a class that references one or more objects of other classes in instance variables*.
+
+`Example`:
+
+```Java
+// Address Class
+public class Address {
+    private String line1;
+    private String city;
+    private String zip;
+}
+```
+
+```Java
+// Customer Class
+public class Customer {
+    private String name;
+    private Address homeAddress;
+    private Address workAddress;
+}
+```
+
+> Notice here that Customer class attribute references to the Address Class. We would always think about the relationship between objects in order to design Object Composition.
+
 ## Abstract Classes
 
 ## Interfaces
