@@ -111,4 +111,59 @@ public class Customer {
 
 ### Inheritance
 
+Remove duplications of code. Especially when two classes have quite similar in terms of state and behaviour. We can use this by using the `extends` keyword and by using the `super()` method when building the `child/sub class` constructor.
+
+`Example`:
+
+```Java
+// Super/parent class: Human
+public class Human{
+    private String name;
+    private String gender;
+    private boolean isHealthy;
+
+    public Human(String name, String gender, boolean isHealthy){
+        this.name = name;
+        this.gender = gender;
+        this.isHealthy = isHealthy;
+    }
+
+    public String walk(int distance){
+        return String.format("I'm walking %d KM.", distance);
+    }
+}
+```
+
+```Java
+// Sub/child class: Student
+public class Student extends Human{
+    private String classAssign;
+
+    public Student(String name,String gender,boolean isHealthy, String classAssign){
+        // *2) Super() method 
+        super(name, gender, isHealthy);
+        this.classAssign = classAssign;
+    }
+
+    // 3) Method Overloading
+    public Student(String name,String gender,boolean isHealthy){
+        super(name, gender, isHealthy);
+        this.classAssign = "1A";
+    }
+    public Student(String classAssign){
+        this.classAssign = classAssign;
+    }
+
+    // *3) Method Overriding
+    public String walk(int distance){
+        return String.format("I'm walking %d miles.", distance);
+    }
+}
+```
+
+> 1) `Object Class` is the root of the class hierarchy.
+> 2) Using the method `super()` is the way to inherit the **Attributes** of the `Super/Parent Class`.
+> 3) **Method Overloading**: A way to instantialise Objects using Classes in different ways.
+> 4) **Method Overriding**: requires the `Sub/Child Class` to have the same name as the `Super/Parent Class`.
+
 ### Polymorphism
