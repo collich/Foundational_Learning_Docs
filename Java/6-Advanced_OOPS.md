@@ -112,6 +112,10 @@ We can use the keyword `abstract`.
 ```Java
 abstract class Animal {
     abstract public void makeSound();
+
+    public String movement(){
+        return "Something is moving"
+    }
 }
 ```
 
@@ -121,6 +125,8 @@ abstract class Animal {
 ## Interfaces
 
 ## 4 Pillars of OOP
+
+Let's go over [Inheritance](#inheritance) and [Polymorphism](#polymorphism) for implementation.
 
 ### Inheritance
 
@@ -168,6 +174,7 @@ public class Student extends Human{
     }
 
     // *3) Method Overriding
+    @Override
     public String walk(int distance){
         return String.format("I'm walking %d miles.", distance);
     }
