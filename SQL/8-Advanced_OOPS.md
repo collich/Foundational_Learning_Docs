@@ -66,9 +66,38 @@ public class Address {
 ```Java
 // Customer Class
 public class Customer {
+    // Attributes
     private String name;
     private Address homeAddress;
     private Address workAddress;
+
+    // Constructor
+    public Customer(String name, Address homeAddress) {
+        this.name = name;
+        this.homeAddress = homeAddress;
+    }
+
+    // Methods - Getters
+    public String getName(){
+        return this.name;
+    }
+    public Address getHomeAddress(){
+        return this.homeAddress;
+    }
+    public Address getWorkAddress(){
+        return this.workAddress;
+    }
+
+    // Methods - Setters
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setHomeAddress(Address homeAddress){
+        this.homeAddress = homeAddress;
+    }
+    public void setWorkAddress(Address workAddress){
+        this.workAddress = workAddress;
+    }
 }
 ```
 
