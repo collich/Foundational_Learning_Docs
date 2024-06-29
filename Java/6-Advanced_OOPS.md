@@ -124,6 +124,66 @@ abstract class Animal {
 
 ## Interfaces
 
+Similar to `Abstract Classes` but a Class can implement multiple `Interface`.
+
+`Interfaces`:
+
+```Java
+// Predator Interface
+public interface Predator{
+    public void hunt();
+}
+```
+
+```Java
+// Prey Interface
+public interface Prey{
+    public void flee();
+}
+```
+
+`Classes`:
+
+```Java
+// Rabbit Class
+public class Rabbit implements Prey{
+    @Override
+    public void flee(){
+        System.out.println("The rabbit is fleeing.");
+    }
+}
+
+// Hawk Class
+public class Hawk implements Predator{
+    @Override
+    public void hunt(){
+        System.out.println("The hawk is hunting.");
+    }
+}
+
+// Fish Class
+public class Fish implements Prey, Predator{
+    @Override
+    public void hunt(){
+        System.out.println("The fish is hunting smaller fishes");
+    }
+
+    @Override
+    public void flee(){
+        System.out.println("The fish is fleeing the larger fish.");
+    }
+}
+
+```
+
+> Over here is an example of implementing **Rabbit**, **Hawk**, **Fish** classes using interfaces.
+
+Think of it this way:
+
+| Interfaces | Abstract Class |
+| :-------------: | :----------------: |
+| Common Methods | Common properties |
+
 ## 4 Pillars of OOP
 
 Let's go over [Inheritance](#inheritance) and [Polymorphism](#polymorphism) for implementation.
