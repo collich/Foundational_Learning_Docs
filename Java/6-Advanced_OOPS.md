@@ -124,7 +124,15 @@ abstract class Animal {
 
 ## Interfaces
 
-Similar to `Abstract Classes` but a Class can implement multiple `Interface`.
+`Overview`:
+
+- Similar to `Abstract Classes` but a Class can implement multiple `Interface`.
+- An `Interface` can `extends` to another `Interface`.
+- [Abstract Class](#abstract-classes) can `inplements` `Interfaces`.
+- `default` keyword can be used to implement more methods to the interface to prevent the `Classes` that have implemented the Interface from `Compilation Error`.
+- No real relationship with [Abstract Class](#abstract-classes).
+- No `private` keyword unlike [Abstract Class](#abstract-classes).
+- Cannot have a `variable` unless it's a `constant`.
 
 `Interfaces`:
 
@@ -183,12 +191,13 @@ Think of it this way:
 | Interfaces | Abstract Class |
 | :-------------: | :----------------: |
 | Common Methods | Common properties |
+| Contract | High Level Structure Class |
 
 ## 4 Pillars of OOP
 
-Let's go over [Inheritance](#inheritance) and [Polymorphism](#polymorphism) for implementation.
+Let's go over [Inheritance and Polymorphism](#inheritance--polymorphism) for implementation.
 
-### Inheritance
+### Inheritance & Polymorphism
 
 Remove duplications of code. Especially when two classes have quite similar in terms of state and behaviour. We can use this by using the `extends` keyword and by using the `super()` method when building the `child/sub class` constructor.
 
@@ -244,6 +253,4 @@ public class Student extends Human{
 > 1) `Object Class` is the root of the class hierarchy.
 > 2) Using the method `super()` is the way to inherit the **Attributes** of the `Super/Parent Class`.
 > 3) **Method Overloading**: A way to instantialise Objects using Classes in different ways.
-> 4) **Method Overriding**: requires the `Sub/Child Class` to have the same name as the `Super/Parent Class`.
-
-### Polymorphism
+> 4) **Method Overriding**: requires the `Sub/Child Class` to have the same name as the `Super/Parent Class`. `Polymorphism`.
