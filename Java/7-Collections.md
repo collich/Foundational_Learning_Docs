@@ -19,7 +19,7 @@ words.size();
 
 > If we use `List` with a method of `of()`. It is immutable. To have a `List` with mutability, we will use `ArrayList`, `LinkedList` or `Vector` Class instead.
 
-### ArrayList vs LinkedList
+### ArrayList vs LinkedList vs Vector
 
 We use `ArrayList` if:
 
@@ -28,8 +28,6 @@ We use `ArrayList` if:
 We use `LinkedList` if:
 
 - We want faster `Insertion` and `Deletion`.
-
-## ArrayList vs Vector
 
 We use `Vector` if:
 
@@ -68,3 +66,43 @@ listOfAnimals.set(1, "Cat");
 listOfAnimals.remove("Fish");
 listOfAnimals.remove(0);
 ```
+
+- Getting the `indexOf` the element:
+
+```Java
+listOfAnimals.indexOf("Yak");
+```
+
+### Iterations for ArrayList
+
+There are multiple ways to `Iterate` around an `ArrayList`
+
+- `(Regular) For Loop`:
+
+```Java
+for (int i = 0; i < listOfAnimals.size()>;i++){
+    System.out.println(listOfAnimals.get(i));
+}
+```
+
+- `(Enhanced) For Loop`.
+  - **Not Recommended** to use it when there you want to make a `Modification`, especially when you want to `remove`, for the `Element`.
+  - Use an `Iterator` when there is a modification.
+
+```Java
+for (String animal : listOfAnimals){
+    System.out.println(animal);
+}
+```
+
+- `Iterator Class`:
+
+```Java
+Iterator<String> animalIterator = listOfAnimals.iterator();
+
+while(animalIterator.hasNext()){
+    System.out.println(animalIterator.next());
+}
+```
+
+- For `Collection Streams`, go look at the section on `Functional Programming & Lambda`.
