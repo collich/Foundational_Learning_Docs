@@ -2,6 +2,11 @@
 
 - Compared to primitive types, in `Collections` the method to get the length of the `List` for example is using the method `size()`.
 
+Common Types:
+
+- [List](#list)
+- [Set](#set)
+
 ## List
 
 Overview:
