@@ -28,3 +28,43 @@ We use `ArrayList` if:
 We use `LinkedList` if:
 
 - We want faster `Insertion` and `Deletion`.
+
+## ArrayList vs Vector
+
+We use `Vector` if:
+
+- We want `Thread Safe - Synchronized Methods`.
+- We want almost `Constant Time - O(1)` access of an Array.
+
+### Array List Operations
+
+- Adding Element(s) in `ArrayList`:
+
+```Java
+ArrayList<String> listOfAnimals = new ArrayList<>();
+
+// Add element at the end of the Array
+listOfAnimals.add("Elephant");
+listOfAnimals.add("Lion");
+listOfAnimals.add("Fish");
+
+// Add Element based on their index
+listOfAnimals.add(1, "Dog");
+
+// Add List to an ArrayList
+List<String> newList = List.of("Yak", "Zebra");
+listOfAnimals.addAll(newList);
+```
+
+- Changing Element in `ArrayList`:
+
+```Java
+listOfAnimals.set(1, "Cat");
+```
+
+- Removing Element in `ArrayList`:
+
+```Java
+listOfAnimals.remove("Fish");
+listOfAnimals.remove(0);
+```
