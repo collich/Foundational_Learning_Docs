@@ -8,6 +8,9 @@ Overview:
 
 - `Ordered` Collection.
 - Allows `duplicate` elements.
+- Think of it like an `Array`.
+- `List.of()` creates an immutable `List`.
+  - Use `ArrayList`, `LinkedList`, `Vector` to make mutable `List`.
 
 ```Java
 // Initialise a List
@@ -16,8 +19,6 @@ List<String> words = List.of("Apple", "Bar", "Cat");
 // Get the Size of the List.
 words.size();
 ```
-
-> If we use `List` with a method of `of()`. It is immutable. To have a `List` with mutability, we will use `ArrayList`, `LinkedList` or `Vector` Class instead.
 
 ### ArrayList vs LinkedList vs Vector
 
@@ -201,4 +202,15 @@ void main(){
     // Sorting studentList in Descending Order
     studentsList.sort(new DescComp());
 }
+```
+
+## Set
+
+- `Unique` things only - Does not allow duplication.
+- `Set` interface extends to `Collection`.
+- `Set.of()` creates immutable `Sets`.
+  - Use `HashSet` or `TreeSet` for mutable `Sets`.
+
+```Java
+Set<String> set = Set.of("Apple", "Banana", "Cat");
 ```
