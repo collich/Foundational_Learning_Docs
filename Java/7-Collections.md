@@ -242,6 +242,20 @@ void main(){
   - Use `HashSet` or `TreeSet` for mutable `Sets`.
 
 ```Java
+interface Set<E> extends Collection<E>{
+    boolean addAll( int paramlnt, Collection<? extends E> paramComparator);
+    E get(int position);
+    E set(int position, E paramE);
+    void add(int position, E paramE);
+    E remove(int paramlnt);
+    int indexOf(Object paramObject);
+    int lastIndexOf(Object paramObject);
+}
+```
+
+- `Implementation`:
+
+```Java
 Set<String> set = Set.of("Apple", "Banana", "Cat");
 ```
 
@@ -310,6 +324,27 @@ numbers.tailSet(50);// All numbers beyond 50
 `Queue` sorts elements in a `Sorted Natural Order`.
 
 There are many different methods of `Queue`:
+
+```Java
+interface Queue<E> extends Collection<E>{
+    // All previous methods
+    boolean addAll( int paramlnt, Collection<? extends E> paramComparator);
+    E get(int position);
+    E set(int position, E paramE);
+    void add(int position, E paramE);
+    E remove(int paramlnt);
+    int indexOf(Object paramObject);
+    int lastIndexOf(Object paramObject);
+    // Queue Additional methods
+    boolean add(E paramE) ;
+    boolean offer(E paramE) ;
+    E remove() ;
+    E poll();
+    E peek();
+}
+```
+
+- `Implementation`:
 
 ```Java
 Queue<String> queue = new PriorityQueue<>();
