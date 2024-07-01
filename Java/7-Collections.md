@@ -242,3 +242,28 @@ We can search the `smallest value` by going all the way to the `left side` of th
   - **`Sorted Order`**.
 
 > All sets cannot have duplicate elements.
+
+### Operations of TreeSets
+
+`TreeSet` implements `Navigable`:
+
+```Java
+TreeSet<Integer> numbers = new TreeSet<>(Set.of(65, 54, 34, 12, 99));
+// -> [12, 34, 54, 65, 99]
+
+// Lower or Floor
+numbers.floor(40);
+numbers.lower(34);
+
+// Higher or Ceiling
+numbers.ceiling(36);
+numbers.higher(36);
+
+// Subset => number between (x, y)
+numbers.subSet(20, 80); //(20, 80) -> (x, y)
+numbers.subSet(34, true, 65, true); // (x >= 34 && y <= 65)
+
+// headSet and tailSet
+numbers.headSet(50); // All numbers up to 50
+numbers.tailSet(50);// All numbers beyond 50
+```
