@@ -219,3 +219,12 @@ void main(){
 ```Java
 Set<String> set = Set.of("Apple", "Banana", "Cat");
 ```
+
+### Tree (sub-section)
+
+A `Tree` data structure is a good way to `Insert`, `Delete` and `Search` in a sorted way.
+
+![Tree Data Structure Image](images/tree.png)
+
+We can search the `smallest value` by going all the way to the `left side` of the tree and `largest value` by going all the way to the `right side` of the tree.
+
