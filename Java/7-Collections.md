@@ -250,20 +250,56 @@ We can search the `smallest value` by going all the way to the `left side` of th
 ```Java
 TreeSet<Integer> numbers = new TreeSet<>(Set.of(65, 54, 34, 12, 99));
 // -> [12, 34, 54, 65, 99]
+```
 
-// Lower or Floor
+- `Lower` or `Floor`:
+
+```Java
 numbers.floor(40);
 numbers.lower(34);
+```
 
-// Higher or Ceiling
+- `Higher` or `Ceiling`:
+
+```Java
 numbers.ceiling(36);
 numbers.higher(36);
+```
 
-// Subset => number between (x, y)
+- `Subset` => number between (x, y):
+
+```Java
 numbers.subSet(20, 80); //(20, 80) -> (x, y)
 numbers.subSet(34, true, 65, true); // (x >= 34 && y <= 65)
+```
 
-// headSet and tailSet
+- `headSet` and `tailSet`:
+
+```Java
 numbers.headSet(50); // All numbers up to 50
 numbers.tailSet(50);// All numbers beyond 50
+```
+
+### Queue and different methods
+
+`Queue` sorts elements in a `Sorted Natural Order`.
+
+There are many different methods of `Queue`:
+
+```Java
+Queue<String> queue = new PriorityQueue<>();
+```
+
+- `Adding` elements:
+
+```Java
+queue.offer("Apple");
+queue.addAll(List.of("Zebra", "Monkey", "Cat"));
+```
+
+- `Polling` (Removing Element, `FIFO`):
+
+```Java
+queue.poll();
+// Removes Apple, first element
 ```
