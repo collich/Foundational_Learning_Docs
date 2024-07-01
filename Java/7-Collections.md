@@ -303,3 +303,35 @@ queue.addAll(List.of("Zebra", "Monkey", "Cat"));
 queue.poll();
 // Removes Apple, first element
 ```
+
+### Making Custom Order
+
+We can make a custom `Queue` order by implementing a `Comparator Interface`.
+
+- Like in the `ArrayList`, we want to implement `Queue` in an `ASC` order:
+
+```Java
+class StringLengthComparator implements Comparator<String>{
+    @Override
+    public int compare(String value1, String value2){
+        return Integer.compare(value1.length(), value2.length());
+    }
+}
+```
+
+- `Queue` in an `DESC` order:
+
+```Java
+class StringLengthComparator implements Comparator<String>{
+    @Override
+    public int compare(String value1, String value2){
+        return Integer.compare(value2.length(), value1.length());
+    }
+}
+```
+
+- Parse it into `initialisation`:
+
+```Java
+Queue<String> queue = new PriorityQueue<>(new StringLengthComparator());
+```
