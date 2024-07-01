@@ -20,6 +20,20 @@ Overview:
   - Use `ArrayList`, `LinkedList`, `Vector` to make mutable `List`.
 
 ```Java
+interface List<E> extends Collection<E>{
+    boolean addAll( int paramlnt, Collection<? extends E> paramComparator);
+    E get(int position);
+    E set(int position, E paramE);
+    void add(int position, E paramE);
+    E remove(int paramlnt);
+    int indexOf(Object paramObject);
+    int lastIndexOf(Object paramObject);
+}
+```
+
+- `Implementation`:
+
+```Java
 // Initialise a List
 List<String> words = List.of("Apple", "Bar", "Cat");
 
