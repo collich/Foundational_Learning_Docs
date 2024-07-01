@@ -228,3 +228,17 @@ A `Tree` data structure is a good way to `Insert`, `Delete` and `Search` in a so
 
 We can search the `smallest value` by going all the way to the `left side` of the tree and `largest value` by going all the way to the `right side` of the tree.
 
+### HashSet vs LinkedHashSet vs TreeSet
+
+- `HashSet`:
+  - When we initialise a `new HashSet<>();` and add elements into it, the elements would be in a random order
+  - **`Random Order`**.
+  - Most Efficient.
+- `LinkedHashSet`:
+  - When we add elements into a `LinkedHashSet`, the elements in the set would be stored in order in which it's `inserted`.
+  - **`Insertion Order`**.
+- `TreeSet`:
+  - Elements added in `TreeSet` will be in a sorted order.
+  - **`Sorted Order`**.
+
+> All sets cannot have duplicate elements.
