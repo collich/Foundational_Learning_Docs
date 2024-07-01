@@ -1,13 +1,15 @@
-# Collections
+# Collections Framework
 
 - Compared to primitive types, in `Collections` the method to get the length of the `List` for example is using the method `size()`.
 
 Common Types:
 
-- [List](#list)
-- [Set](#set)
+- [List Interface](#list-interface)
+- [Set Interface](#set-interface)
+- [Queue Interface](#queue-interface)
+- [Map Interface](#map-interface)
 
-## List
+## List Interface
 
 Overview:
 
@@ -209,7 +211,7 @@ void main(){
 }
 ```
 
-## Set
+## Set Interface
 
 - `Unique` things only - Does not allow duplication.
 - `Set` interface extends to `Collection`.
@@ -280,7 +282,7 @@ numbers.headSet(50); // All numbers up to 50
 numbers.tailSet(50);// All numbers beyond 50
 ```
 
-### Queue and different methods
+## Queue Interface
 
 `Queue` sorts elements in a `Sorted Natural Order`.
 
@@ -289,6 +291,8 @@ There are many different methods of `Queue`:
 ```Java
 Queue<String> queue = new PriorityQueue<>();
 ```
+
+### Queue Operations
 
 - `Adding` elements:
 
@@ -334,4 +338,39 @@ class StringLengthComparator implements Comparator<String>{
 
 ```Java
 Queue<String> queue = new PriorityQueue<>(new StringLengthComparator());
+```
+
+## Map Interface
+
+- `Key` - `Value` Pair.
+- Think of it like `Dictionary` in `Python`.
+- `Essentials`:
+
+```Java
+interface Map<L, V>{
+    int size();
+    boolean isEmpty() ;
+    boolean containsKey(Object paramObject) ;
+    boolean containsVa1ue(Object paramObject) ;
+    V get (Object key) ;
+    V put (K key, V value) ;
+    V remove (Object key) ;
+    void putAll (Map<? extends K,? extends V> paramMap);
+    void clear() ;
+    Set<K> keyset() ;
+    Collection<V> values() ;
+    Set<Entry<K,V>> entrySet( ) ;
+    boolean equals (Object paramObject)
+}
+```
+
+### HashMap vs LinkedHashMap vs HashTable vs TreeMap
+
+- `HashMap`:
+  - unsorted, unordered
+  - key's hashcode() is used
+
+```Java
+class HashMap implements Map{
+}
 ```
