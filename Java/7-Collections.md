@@ -59,22 +59,31 @@ We use `Vector` if:
 - We want `Thread Safe - Synchronized Methods`.
 - We want almost `Constant Time - O(1)` access of an Array.
 
-### Array List Operations
+### ArrayList Operations
 
 - Adding Element(s) in `ArrayList`:
 
 ```Java
 ArrayList<String> listOfAnimals = new ArrayList<>();
+```
 
-// Add element at the end of the Array
+- `Add` element at the end of the `Array`:
+
+```Java
 listOfAnimals.add("Elephant");
 listOfAnimals.add("Lion");
 listOfAnimals.add("Fish");
+```
 
-// Add Element based on their index
+- `Add` element based on their `Index`:
+
+```Java
 listOfAnimals.add(1, "Dog");
+```
 
-// Add List to an ArrayList
+- `Add` List to an ArrayList:
+
+```Java
 List<String> newList = List.of("Yak", "Zebra");
 listOfAnimals.addAll(newList);
 ```
