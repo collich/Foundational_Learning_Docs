@@ -462,3 +462,81 @@ class LinkedHashMap implements Map{
 class TreeMap implements Map, NavigableMap{
 }
 ```
+
+### Map Operations
+
+- `Initilised`:
+
+```Java
+Map<String, Integer> map = Map.of("A", 3, "B", 5, "Z", 10);
+```
+
+- `Get` value:
+
+```Java
+map.get("Z")
+// 10
+```
+
+- `Size` of the `HashMap`:
+
+```Java
+map.size()
+// 3
+```
+
+- `isEmpty`:
+
+```Java
+map.isEmpty()
+// false
+```
+
+- Contains a `key`:
+
+```Java
+map.containsKey("A");
+// true
+map.containsKey("F");
+// false
+```
+
+- Contains a `value`:
+
+```Java
+map.containsValue(3);
+// true
+```
+
+- Retrieve `keys`:
+
+```Java
+map.keySet();
+// [Z, A, B]
+```
+
+- Retrieve `values`:
+
+```Java
+map.values();
+// [10, 3, 5]
+```
+
+#### HashMap Operations
+
+- `Initialise`:
+
+```Java
+Map<String, Integer> map = new HashMap();
+// or
+Map<String, Integer> map = new HashMap(map);
+```
+
+- `Add` elements into `HashMap`:
+
+```Java
+map.put("F", 5);
+// Adding value
+map.put("Z", 11);
+// Editing value from 10 to 11
+```
