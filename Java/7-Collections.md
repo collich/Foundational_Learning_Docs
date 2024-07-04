@@ -432,3 +432,33 @@ interface Map<L, V>{
 class HashMap implements Map{
 }
 ```
+
+- `Hashtable`:
+  - Synchronized - ==Thread Safe== - Version of `HashMap`
+  - unsorted, unordered
+  - key's hashcode() is used
+  - `HashMap` allows a key with `null` value. `Hashtable` doesn't. (==Interview Question==)
+
+```Java
+class Hashtable implements Map{
+}
+```
+
+- `LinkedHashMap`:
+  - `Insertion order` is maintained
+  - ==Slower== `insertion and deletion`
+  - ==Faster== `iteration`
+
+```Java
+class LinkedHashMap implements Map{
+}
+```
+
+- `TreeMap`:
+  - `Sorted order` is maintained
+  - Implements `NavigableMap`
+
+```Java
+class TreeMap implements Map, NavigableMap{
+}
+```
