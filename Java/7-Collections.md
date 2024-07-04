@@ -540,3 +540,65 @@ map.put("F", 5);
 map.put("Z", 11);
 // Editing value from 10 to 11
 ```
+
+#### TreeMap NavigableMap
+
+```Java
+Map<String, Integer> map = Map.of("A", 15, "B", 25, "F", 25, "Z", 5, "G", 25, "L", 250);
+
+Map<String, Integer> treeMap = new HashMap(map);
+// { A=15 B=25 F=25 G=25 L=250 Z=5}
+```
+
+- `Higher` than the value of the `key`:
+
+```Java
+treeMap.higherKey("B");
+// "F"
+```
+
+- `Greater than or Equals, >=` to the `key`:
+
+```Java
+treeMap.ceilingKey("B");
+// "B"
+```
+
+- `Lower` than the value of the `key`:
+
+```Java
+treeMap.lowerKey("B");
+// "A"
+```
+
+- `Lower than or Equals, <=` to the `key`:
+
+```Java
+treeMap.floorKey("B");
+// "B"
+```
+
+- `First` element:
+
+```Java
+treeMap.firstEntry();
+// A=15
+```
+
+- `Last` element:
+
+```Java
+treeMap.lastEntry();
+// Z=5
+```
+
+- `SubMap` or `Slicing` => element between (x, y):
+
+```Java
+treeMap.subMap("C", "Y");
+// {F=25, G=25, L=250}
+treeMap.subMap("B", "Z");
+// {B=25, F=25, G=25, L=250} => exclude y, which is "Z"
+treeMap.subMap("B", true, "Z", true);
+// {B=25, F=25, G=25, L=250, Z=5} => includes Z
+```
