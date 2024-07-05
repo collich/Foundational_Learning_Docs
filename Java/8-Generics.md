@@ -64,3 +64,31 @@ public class GenericsRunner {
     }
 }
 ```
+
+## Restrictions to certain types
+
+To restrict to a certain type, we can use the keyword `extends`.
+
+```Java
+public class MyCustomList<T extends Number>{
+    ArrayList<T> list = new ArrayList<>();
+
+    public void addElement(T element){
+        list.add(element);
+    }
+
+    public void removeElement(T element){
+        list.remove(element);
+    }
+}
+```
+
+> `Byte`, `Double`, `Float`, `Integer`, `Long` and `Short` are all subclasses of `Number`.
+
+- We can also use `Generics` with methods:
+
+```Java
+static <X> X returnValue(X value){
+    return value;
+}
+```
