@@ -54,3 +54,28 @@ public printUsingLoop(List<String> list){
 }
 
 ```
+
+### Filter Implementation
+
+We can take out specific elements from the `List` using the `filter()` method.
+
+`Loop` Implementation - filter:
+
+```Java
+public printUsingStream(List<String> list){
+    for(String item : list){
+        if (item.endsWith("at")){
+            System.out.println(item);
+        }
+    }
+}
+```
+
+`Stream` Implementation - print:
+
+```Java
+public printUsingLoop(List<String> list){
+    list.stream()
+        .filter(element -> element.endsWith("at"))
+        .forEach(element -> System.out.println(element));
+}
