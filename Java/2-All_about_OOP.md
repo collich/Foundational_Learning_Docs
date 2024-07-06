@@ -1,5 +1,7 @@
 # All about OOP
 
+---
+
 ## What is an OOP?
 
 It's about thinking in terms of programming in an Object Oriented Paradigm.

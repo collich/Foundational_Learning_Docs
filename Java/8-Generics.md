@@ -1,5 +1,7 @@
 # Generics
 
+---
+
 `Generics` aims to solve the problem of `Objects` only accepting to take in a certain type.
 
 - `MyCustomList` is based on `String` type being passed in:

@@ -1,5 +1,7 @@
 # Advanced OOPS
 
+---
+
 Basics of OOP:
 
 - `Classes` are `template`

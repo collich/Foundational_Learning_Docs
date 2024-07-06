@@ -1,5 +1,7 @@
 # Reference Types
 
+---
+
 Any class that is created by you is a reference type. Java have some of the pre-defined reference tclass like `String`, `Wrapper`, `BigDecimal`...etc.
 
 ## How are Reference Types stored in memory

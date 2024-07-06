@@ -1,5 +1,7 @@
 # Array and ArrayList
 
+---
+
 ## Array
 
 To write an array in Java, you would need to just type `<Type>[]`:

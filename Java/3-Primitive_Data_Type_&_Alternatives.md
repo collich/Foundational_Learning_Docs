@@ -1,5 +1,7 @@
 # Primitive Data Type and Alternatives
 
+---
+
 ## Primitive Data Type in Java
 
 - `Integer`:
