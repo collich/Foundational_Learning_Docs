@@ -92,3 +92,38 @@ static <X> X returnValue(X value){
     return value;
 }
 ```
+
+## Wildcards
+
+We can use the `?` keyword to specify it's a `Wildcard`:
+
+- `Upper Bound` - use `extends`:
+
+```Java
+// Notice the method with the wild card below specifies "extends"
+static Double sumOfNumberList(List<? extends Number> numbers){
+    double sum = 0.0;
+    for(Number number : numbers){
+        sum += number.doubleValue();
+    }
+    return sum;
+}
+```
+
+**Upperbound**: helps with implementing common logics. Which are those classes that `extends` to the extended type.
+
+- `Lower Bound` - use `super`:
+
+```Java
+// Notice the method with the wild card below specifies "super"
+static void addACoupleOfValues(List<? super Number> numbers){
+    numbers.add(1);
+    numbers.add(1.0);
+    numbers.add(1.0f);
+    numbers.add(1l);
+}
+```
+
+**LowerBound**: helps with adding different values of the types which are a sub-type of the extended type.
+
+> To understand UpperBound and LowerBound, [Watch this video](https://www.youtube.com/watch?v=o9YzJN0-AT4)
