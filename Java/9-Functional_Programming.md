@@ -17,6 +17,11 @@ Intermediate Operations Methods:
 - `sorted()`
 - `distinct()`
 - `map()`
+
+Terminal Operations Methods:
+
+- `max`
+- `min`
 - `collect()`
 
 ### Implementation of Streams vs Loop
@@ -160,4 +165,30 @@ List<Integer> numbers = List.of(4,6,8,13,3,15);
 public int outputUsingStream(List<Integer> numbers){
     return numbers.stream().distinct().sorted().map(e -> e * e);
 }
+```
+
+### Min-Max Implementation
+
+We can use `min` and `max` get get either the `min` or `max` value when using streams. We would also need to create an expression for it like the `Comparator Compare()` function.
+
+```Java
+List<Integer> list = List.of(23,12,34,53);
+```
+
+- `Min`:
+
+```Java
+list.stream().min((n1,n2) -> Integer.compare(n1,n2));
+// Will give Optional[12]. Will need to use the "get()" method
+list.stream().min((n1,n2) -> Integer.compare(n1,n2)).get();
+// 12
+```
+
+- `Max`:
+
+```Java
+list.stream().max((n1,n2) -> Integer.compare(n1,n2));
+// Will give Optional[53]. Will need to use the "get()" method
+list.stream().max((n1,n2) -> Integer.compare(n1,n2)).get();
+// 53
 ```
