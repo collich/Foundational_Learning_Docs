@@ -53,3 +53,44 @@ void main(){
     thread.start();
 }
 ```
+
+## States of Threads
+
+Threads have 5 states:
+
+- `NEW`
+- `RUNNABLE`
+- `RUNNING`
+- `BLOCKED/WAITING`
+- `TERMINATED/DEAD`
+
+## `NEW`
+
+This state is when the thread have been `Initialise/Created`:
+
+```Java
+Task task1 = new Task();
+// or
+Thread thread = new Thread(task2);
+```
+
+## `RUNNABLE`
+
+This state is when the `Thread` is ready but not being executed.
+
+Example:
+
+`Thread1` and `Thread2`. When the CPU switches from `task1(Thread1)` to `task2(Thread2)`, `task2` is in the running state and `task1` is in a `RUNNABLE` state.
+
+## `RUNNING`
+
+This is the state when the `Thread` is currently performing it's tasks.
+
+## `BLOCKED/WAITING`
+
+This state is when waiting for an internal service, like a database, to respond in order to continue a task.
+Another case could be that `task1` depends on `task2` for some data to finish execution. So `task1` is in a state of `BLOCKED/WAITING`.
+
+## `TERMINATED/DEAD`
+
+This state is when the `Thread` have finished execution.
