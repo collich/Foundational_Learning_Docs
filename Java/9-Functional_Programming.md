@@ -192,3 +192,11 @@ list.stream().max((n1,n2) -> Integer.compare(n1,n2));
 list.stream().max((n1,n2) -> Integer.compare(n1,n2)).get();
 // 53
 ```
+
+### Collect Implmentation
+
+We can `collect` the streamed Collections into an output by using the `collect` keyword.
+
+```Java
+List<Integer> newList = list.stream().filter(e -> e%2 != 0).collect(Collectors.toList());
+```
