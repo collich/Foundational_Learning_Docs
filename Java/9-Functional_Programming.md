@@ -66,6 +66,8 @@ public printUsingStream(List<String> list){
 
 ```
 
+> Behind the scenes of `forEach()`, it accepts a `Consumer Interface` with a method of `void accept(T t)`.
+
 ### Filter Implementation
 
 We can take out specific elements from the `List` using the `filter()` method.
@@ -91,6 +93,8 @@ public printUsingStream(List<String> list){
         .forEach(element -> System.out.println(element));
 }
 ```
+
+> Behind the `filter()`, it accepts a `Predicate Interface` which has a method of `boolean test(T t)` .
 
 ### Reduce Implementation
 
@@ -166,6 +170,8 @@ public int outputUsingStream(List<Integer> numbers){
     return numbers.stream().distinct().sorted().map(e -> e * e);
 }
 ```
+
+> Behind the scenes of `map()`, it accepts a `Function Interface` that has a method of `R apply(T t)`.
 
 ### Min-Max Implementation
 
