@@ -230,3 +230,52 @@ We can also assign a default value by giving it a `orElse()` method:
 List.of(13, 15, 33, 67).stream().filter(e -> e%2 == 0).max((n1,n2) -> Integer.compare(n1,n2)).orElse(0);
 // Output will be "0"
 ```
+
+## Method Reference
+
+**Method Reference** is a way that we can shorthand our code to make it more readable. We would also use the keyword `static` to give make it a `Method Reference`. The structure of how we can do Method References is:
+
+```Java
+<Class>::<Method>
+```
+
+### Example 1
+
+Class:
+
+```Java
+public class DoStuff<T>{
+    public static void print(T stuff){
+        System.out.println(stuff)
+    }
+}
+```
+
+`main` method:
+
+```Java
+public static void main(String[] args){
+    List<String> list = List.of("Ant", "Bat", "Cat", "Dog", "Elephant")
+
+    list.stream().forEach(DoStuff::print);
+    list.map(String::length).forEach(DoStuff::print);
+}
+```
+
+### Example 2
+
+```Java
+public class JavaExampleTwo{
+    public static void main(){
+        List<Integer> list = List.of(23,45,67,34,68,72)
+        Integer maxEven = list.stream()
+            .filter(JavaExampleTwo::isEven)
+            .max(Integer::compare)
+            .orElse(0);
+    }
+
+    public static boolean isEven(Integer number){
+        return number % 2 == 0;
+    }
+}
+```
