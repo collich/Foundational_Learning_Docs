@@ -200,3 +200,11 @@ We can `collect` the streamed Collections into an output by using the `collect` 
 ```Java
 List<Integer> newList = list.stream().filter(e -> e%2 != 0).collect(Collectors.toList());
 ```
+
+### IntStream to Stream
+
+If we want to create a `IntStream` object and turn it into a `Stream` object, we can use the method `boxed()`:
+
+```Java
+List<Integer> list = IntStream.range(1, 11).boxed().collect(Collectors.toList());
+```
