@@ -208,3 +208,19 @@ If we want to create a `IntStream` object and turn it into a `Stream` object, we
 ```Java
 List<Integer> list = IntStream.range(1, 11).boxed().collect(Collectors.toList());
 ```
+
+## Optional Class
+
+It is a `Class` present to avoid `Streams` from returning a `null` value.
+
+```Java
+List.of(13, 15, 33, 67).stream().filter(e -> e%2 == 0).max((n1,n2) -> Integer.compare(n1,n2));
+// Output will be Optional.empty
+```
+
+We can also assign a default value by giving it a `orElse()` method:
+
+```Java
+List.of(13, 15, 33, 67).stream().filter(e -> e%2 == 0).max((n1,n2) -> Integer.compare(n1,n2)).orElse(0);
+// Output will be "0"
+```
