@@ -8,10 +8,15 @@ Stream is an ordered pipeline of aggregate operations that process a sequence of
 
 Some common Methods:
 
+- `forEach()`
 - `filter()`
 - `reduce()`
+
+Intermediate Operations Methods:
+
+- `sorted()`
+- `distinct()`
 - `map()`
-- `forEach()`
 - `collect()`
 
 ### Implementation of Streams vs Loop
@@ -106,10 +111,53 @@ public int outputUsingLoop(List<Integer> numbers){
 
 ```Java
 public int outputUsingStream(List<Integer> numbers){
-    int sum = numbers.stream().reduce(
+    return numbers.stream().reduce(
         0, // Starting value
         (number1, number2) -> number1 + number2 // expression
         );
-    return sum;
+}
+```
+
+### Sorted Implementation
+
+We can sort all the numbers in the list by using the `sorted` keyword.
+
+`Stream` Implementation - sorted:
+
+```Java
+public int outputUsingStream(List<Integer> numbers){
+    return numbers.stream().sorted();
+}
+```
+
+### Distinct Implementation
+
+We can find all the distinct numbers within the `List`.
+
+```Java
+List<Integer> numbers = List.of(1, 1, 2, 3, 3, 4, 5, 5);
+```
+
+`Stream` Implementation - distinct:
+
+```Java
+public int outputUsingStream(List<Integer> numbers){
+    return numbers.stream().distinct();
+}
+```
+
+### Map Implementation
+
+We can do a little operations like mapping each element and doing some sort of operation in the `List`.
+
+```Java
+List<Integer> numbers = List.of(4,6,8,13,3,15);
+```
+
+`Stream` Implementation - distinct:
+
+```Java
+public int outputUsingStream(List<Integer> numbers){
+    return numbers.stream().distinct().sorted().map(e -> e * e);
 }
 ```
