@@ -64,7 +64,7 @@ Threads have 5 states:
 - `BLOCKED/WAITING`
 - `TERMINATED/DEAD`
 
-## `NEW`
+### `NEW`
 
 This state is when the thread have been `Initialise/Created`:
 
@@ -74,7 +74,7 @@ Task task1 = new Task();
 Thread thread = new Thread(task2);
 ```
 
-## `RUNNABLE`
+### `RUNNABLE`
 
 This state is when the `Thread` is ready but not being executed.
 
@@ -82,15 +82,34 @@ Example:
 
 `Thread1` and `Thread2`. When the CPU switches from `task1(Thread1)` to `task2(Thread2)`, `task2` is in the running state and `task1` is in a `RUNNABLE` state.
 
-## `RUNNING`
+### `RUNNING`
 
 This is the state when the `Thread` is currently performing it's tasks.
 
-## `BLOCKED/WAITING`
+### `BLOCKED/WAITING`
 
 This state is when waiting for an internal service, like a database, to respond in order to continue a task.
 Another case could be that `task1` depends on `task2` for some data to finish execution. So `task1` is in a state of `BLOCKED/WAITING`.
 
-## `TERMINATED/DEAD`
+### `TERMINATED/DEAD`
 
 This state is when the `Thread` have finished execution.
+
+## Priority of Threads
+
+We can change the `Thread` priority by using a method `setPriority`.
+For the method, we can only specify within a specific range from `MIN_PRIORITY = 1` to `MAX_PRIORITY = 10`. By default, the priority is `NORM_PRIORITY = 5`.
+
+This method is only a `request`. It may or may not be honored.
+
+```Java
+Task task1 = new Task();
+task1.setPriority(1);
+
+Task2 task2 = new Task2();
+Thread thread = new Thread(task2);
+thread.setPriority(10);
+
+task1.start();
+thread.start();
+```
