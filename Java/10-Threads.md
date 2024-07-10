@@ -113,3 +113,18 @@ thread.setPriority(10);
 task1.start();
 thread.start();
 ```
+
+## Join
+
+We can let have a `Thread` in a `Terminate/Dead` before completing a non thread related task.
+
+```Java
+task1.join() 
+
+// Task 3
+for (int i = 200; i < 300>; i++){
+    System.out.println(i);
+}
+```
+
+> In this scenario, we have a piece of code that allows `task1` to be completed before "Task 3" executes.
