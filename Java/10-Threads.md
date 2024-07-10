@@ -128,3 +128,30 @@ for (int i = 200; i < 300>; i++){
 ```
 
 > In this scenario, we have a piece of code that allows `task1` to be completed before "Task 3" executes.
+
+## Utility methods
+
+There are a few miscellaneous `static` methods for `Thread`.
+
+- `sleep()`
+- `yield()`
+
+### Sleep
+
+As the name suggest, it let's the `Thread` to sleep.
+
+```Java
+Thread.sleep();
+```
+
+### yield
+
+Another `static` method that allows the `Thread` to give up CPU to the `Scheduler`.
+
+```Java
+Thread.yield();
+```
+
+### Synchronized
+
+It is a keyword to have the program run a method by a single `Thread` while other `Thread` waits for the single `Thread` to finish execution.
