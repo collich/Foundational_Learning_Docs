@@ -155,3 +155,7 @@ Thread.yield();
 ### Synchronized
 
 It is a keyword to have the program run a method by a single `Thread` while other `Thread` waits for the single `Thread` to finish execution.
+
+## Executor Service
+
+It's a service that enables us to control the `Execution of Threads` as a group
