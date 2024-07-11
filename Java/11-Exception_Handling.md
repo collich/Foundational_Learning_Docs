@@ -59,7 +59,7 @@ try{
 
 > This is dangerous as we won't know the error and wouldn't have any inkling on how to handle the error.
 
-### Exception Hierarchy
+### Exception Hierarchy and Matching
 
 There are `Hierarchy` for `Exceptions`.
 
