@@ -234,3 +234,53 @@ public class App {
     }
 }
 ```
+
+### Retrieving Values from Thread
+
+We can return use `Callable<T>` **Interface** to implement a return value for `Threads`.
+
+- `CallableRunner`:
+
+```Java
+public class CallableRunner implements Callable<String>{
+    private String name;
+
+    public CallableRunner(int number) {
+        this.name = "Task " + number;
+    }
+
+    @Override
+    public String call() throws Exception {
+        System.out.printf("%s is Executing\n", this.name);
+        StringBuilder strBuilder = new StringBuilder;
+        strBuilder.append(this.name);
+        strBuilder.append(" has finished.");
+        Thread.sleep(1000);
+        return strBuilder.toString();
+    }
+}
+```
+
+- `App.java`:
+
+```Java
+public class App {
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
+        ArrayList<Future<String>> newList = new ArrayList<>(); 
+
+        ExecutorService executorService = Executors.newFixedThreadPool(2);
+
+        for (int i = 1; i <= 4; i++){
+            Future<String> futureString = executorService.submit(new CallableRunner(i));
+            newList.add(futureString);
+        }
+
+        for (int i = 0; i < 4; i++){
+            String newString = newList.get(i).get();
+            System.out.println(newString);
+        }
+        
+        executorService.shutdown();
+    }
+}
+```
