@@ -158,4 +158,23 @@ It is a keyword to have the program run a method by a single `Thread` while othe
 
 ## Executor Service
 
-It's a service that enables us to control the `Execution of Threads` as a group
+It's a service that enables us to control the `Execution of Threads` as a group.
+
+- `ExecutorService` is a `Class`
+
+```Java
+// Ensures a Single Thread is running at a time
+ExecutorService executorService = Executors.newSingleThreadExecutor();
+executorService.execute(new Task());
+executorService.execute(new Thread(task2));
+```
+
+### Take Note (Recommended)
+
+To shut down the `Executor Service` at the last line:
+
+```Java
+executorService.shutdown();
+```
+
+> This step is to ensure the program stops running after shutting the service off.
