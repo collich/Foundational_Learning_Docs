@@ -28,3 +28,34 @@ public static void main(String[] args){
 > This causes `NullPointerException`.
 
 ### Handling Exceptions
+
+How we can handle exceptions is by using `try...catch`
+
+```Java
+public static void main(String[] args){
+  method1();
+}
+
+public void method1(){
+  try{
+    String str = null;
+    str.length();
+  } catch (Exception ex) {
+    ex.printStackTrace();
+  }
+}
+```
+
+#### Note for exception
+
+If we were to not fill the catch with any code, the exception will be gobbled up.
+
+```Java  
+try{
+  String str = null;
+  str.length();
+} catch (Exception ex) {
+}
+```
+
+> This is dangerous as we won't know the error and wouldn't have any inkling on how to handle the error.
