@@ -169,6 +169,8 @@ executorService.execute(new Task());
 executorService.execute(new Thread(task2));
 ```
 
+> The block of code above shows that `task1` would start and finish execution then `task2` will start.
+
 ### Take Note (Recommended)
 
 To shut down the `Executor Service` at the last line:
@@ -178,3 +180,57 @@ executorService.shutdown();
 ```
 
 > This step is to ensure the program stops running after shutting the service off.
+
+### Customising the number of Threads using Executor Service
+
+One way to do muli-threading in `Thread` is to:
+
+```Java
+executorService.newFixedThreadPool(<number_of_threads>);
+executorService.newFixedThreadPool(2); // This is to specify 2 threads
+```
+
+> In the example, we state that at any point in time we only expect to have 2 threads running.
+
+### Stringing all together
+
+- `Task` Class:
+
+```Java
+public class Task extends Thread {
+    private int number;
+
+    public Task(int number){
+        this.number = number;
+    }
+
+    public void run(){
+        System.out.printf("Task %d has Started\n", this.number);
+
+        for (int i = this.number; i < this.number * 100 + 99; i++){
+            System.out.println(i);
+        }
+
+        System.out.printf("Task %d has Stopped\n", this.number);
+    }
+}
+```
+
+- `App.java` main:
+
+```Java
+public class App {
+    public static void main(String[] args){
+        ExecutorService executorService = Executors.newFixedThreadPool(2); // At any time, 2 Threads are active at any point in time
+
+        executorService.execute(new Task(1));
+        executorService.execute(new Task(2));
+        executorService.execute(new Task(3));
+        executorService.execute(new Task(4));
+        executorService.execute(new Task(5));
+        executorService.execute(new Task(6));
+
+        executorService.shutdown();
+    }
+}
+```
