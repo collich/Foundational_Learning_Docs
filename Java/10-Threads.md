@@ -239,13 +239,13 @@ public class App {
 
 We can return use `Callable<T>` **Interface** to implement a return value for `Threads`.
 
-- `CallableRunner`:
+- `CallableTask`:
 
 ```Java
-public class CallableRunner implements Callable<String>{
+public class CallableTask implements Callable<String>{
     private String name;
 
-    public CallableRunner(int number) {
+    public CallableTask(int number) {
         this.name = "Task " + number;
     }
 
@@ -273,13 +273,39 @@ public class App {
         for (int i = 1; i <= 4; i++){
             // Future over here is a promise.
             // Meaning we will have a result at a later time.
-            Future<String> futureString = executorService.submit(new CallableRunner(i));
+            Future<String> futureString = executorService.submit(new CallableTask(i));
             newList.add(futureString);
         }
 
         for (int i = 0; i < 4; i++){
             String newString = newList.get(i).get();
             System.out.println(newString);
+        }
+        
+        executorService.shutdown();
+    }
+}
+```
+
+### Multiple Tasks
+
+We can use a method that is present to invoke all multiple tasks
+
+```Java
+public class App {
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
+        ArrayList<Future<String>> newList = new ArrayList<>(); 
+
+        ExecutorService executorService = Executors.newFixedThreadPool(2);
+
+        for (int i = 1; i <= 4; i++){
+            newList.add(new CallableTask(i));
+        }
+
+        ArrayList<Future<String>> results = executorService.invokeAll(newList);
+
+        for (Future<String> result : results){
+            System.out.println(result.get());
         }
         
         executorService.shutdown();
