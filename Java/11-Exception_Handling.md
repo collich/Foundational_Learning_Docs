@@ -117,3 +117,29 @@ public void method1(){
 ```
 
 > The `catch` block with the `ArrayIndexOutOfBoundsException` will be ran.
+
+### Finally Block
+
+We can catch the error and still run the code after if we need to by using the `finally` keyword.
+
+Example if we have a `Scanner` Object and we want to close the `Scanner` as if there are too many `Scanner` Object not being close, there would be a memory leak.
+
+```Java
+public staic void main(String[] args){
+  Scanner scanner = null;
+  try{
+    scanner = new Scanner(System.in);
+
+    int[] numbers = {1,2,2,5};
+    int viewNumber = numbers[10];
+    System.out.println(viewNumber);
+
+    scanner.close(); // This line won't execute as there is a ArrayIndexOutOfBoundsException happening on top.
+  } catch (Exception ex){
+    ex.printStacktrace();
+  } finally {
+    scanner.close(); // This line will execute.
+  }
+}
+
+```
