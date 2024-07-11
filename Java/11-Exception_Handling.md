@@ -54,8 +54,66 @@ If we were to not fill the catch with any code, the exception will be gobbled up
 try{
   String str = null;
   str.length();
-} catch (Exception ex) {
-}
+} catch (Exception ex) {}
 ```
 
 > This is dangerous as we won't know the error and wouldn't have any inkling on how to handle the error.
+
+### Exception Hierarchy
+
+There are `Hierarchy` for `Exceptions`.
+
+- `Exception` Class is the superclass of all exceptions.
+- We can have multiple `catch` blocks and it will match to the appropriate one.
+
+**Example 1** - `NullPointerException`:
+
+```Java
+public static void main(String[] args){
+  method1();
+}
+
+public void method1(){
+  try{
+    String str = null;
+    str.length();
+  } catch (NullPointerException ex){
+    System.out.println("Matched Null Pointer Exception");
+    ex.printStackTrace();
+  } catch (Exception ex) {
+    System.out.println("Matched General Exception");
+    ex.printStackTrace();
+  }
+}
+```
+
+> This example will get caught on the `NullPointerException` Block.
+
+**Example 2** - `ArrayIndexOutOfBoundsException`:
+
+```Java
+public static void main(String[] args){
+  method1();
+}
+
+public void method1(){
+  try{
+    int[] i = {1,2};
+    int j = i[3];
+
+  } catch (NullPointerException ex){
+    System.out.println("Matched Null Pointer Exception");
+    ex.printStackTrace();
+
+  } catch (ArrayIndexOutOfBoundsException ex) {
+    System.out.println("Matched Array Index Out of Bounds Exception");
+    ex.printStackTrace();
+
+  } catch (Exception ex) {
+    System.out.println("Matched General Exception");
+    ex.printStackTrace();
+  }
+}
+```
+
+> The `catch` block with the `ArrayIndexOutOfBoundsException` will be ran.
