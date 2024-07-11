@@ -289,7 +289,7 @@ public class App {
 
 ### Multiple Tasks
 
-We can use a method that is present to invoke all multiple tasks
+We can use a method that is present to invoke all multiple tasks. We can use the `invokeAll()` method.
 
 ```Java
 public class App {
@@ -302,11 +302,37 @@ public class App {
             newList.add(new CallableTask(i));
         }
 
+        // Invoke all the 4 Threads to finish before returning.
         ArrayList<Future<String>> results = executorService.invokeAll(newList);
 
         for (Future<String> result : results){
             System.out.println(result.get());
         }
+        
+        executorService.shutdown();
+    }
+}
+```
+
+### Invoke the fastest task
+
+Instead of waiting for all the task, we would want to invoke the ones that are the fastest. A method we can use is `invokeAny()`.
+
+```Java
+public class App {
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
+        ArrayList<Future<String>> newList = new ArrayList<>(); 
+
+        ExecutorService executorService = Executors.newFixedThreadPool(4);
+
+        for (int i = 1; i <= 4; i++){
+            newList.add(new CallableTask(i));
+        }
+
+        // It will only output the first task that have finished.
+        String result = executorService.invokeAny(newList);
+
+        System.out.println(result);
         
         executorService.shutdown();
     }
