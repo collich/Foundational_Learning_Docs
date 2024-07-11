@@ -271,6 +271,8 @@ public class App {
         ExecutorService executorService = Executors.newFixedThreadPool(2);
 
         for (int i = 1; i <= 4; i++){
+            // Future over here is a promise.
+            // Meaning we will have a result at a later time.
             Future<String> futureString = executorService.submit(new CallableRunner(i));
             newList.add(futureString);
         }
