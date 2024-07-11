@@ -138,7 +138,9 @@ public staic void main(String[] args){
   } catch (Exception ex){
     ex.printStacktrace();
   } finally {
-    scanner.close(); // This line will execute.
+    if (scanner != null) {
+      scanner.close(); // This line will execute.
+    }
   }
 }
 
