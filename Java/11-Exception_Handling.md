@@ -294,3 +294,22 @@ public static void main(String[] args){
 ```
 
 > When a class is being extended to an `AutoCloseable` Class, we can use this new `try` shorthand form.
+
+How we can add multiple Exception is:
+
+```Java
+try{
+  <code>
+} catch (IOException | SQLException ex){
+  ex.printStackTrace();
+}
+```
+
+## Best Practices - Handling Exception
+
+- Never Hide Exceptions.
+- Do not use it for flow control.
+- Think about your user.
+- Think about your support team.
+- Think about the calling method.
+- Have global exception handling.
