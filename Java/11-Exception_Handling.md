@@ -188,3 +188,50 @@ public static void main(String[] args){
   }
 }
 ```
+
+## Exception Hierarchy
+
+Pre-defined Java Classes:
+
+```Java
+class Error extends Throwable{} 
+class Exception extends Throwable{}
+class InterruptedException extends Exception{}
+class RuntimeException extends Exception{}
+class NullPointerException extends RuntimeException{}
+```
+
+- `Error` Class: Developers wouldn't be able to handle this but can be prevented.
+- `Exception` Class: May be able to handle.
+- `Checked Exception` is **risky**.
+
+> Every subclass under `Exception`, that is not `RuntimeException`, are **Checked Exception**.
+
+## Throwing Exception
+
+We can throw new `Exception` when we want to tell the user about a custom error.
+
+- `Amount.java` Class:
+
+```Java
+public Amount {
+  private String currency;
+  private int amount;
+
+  public Amount(String currency, int amount){
+    this.currency = currency;
+    this.amount = amount;
+  }
+
+  public void add(Ammount that){
+    if (this.currency.equals(that.currency)){
+      // Over here we're throwing a new Exception
+      throw new RuntimeException("Currencies don't match!");
+    }
+  }
+
+  public String toString(){
+    return this.currency + " - " + this.amount;
+  }
+}
+```
