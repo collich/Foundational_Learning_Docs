@@ -207,7 +207,7 @@ class NullPointerException extends RuntimeException{}
 
 > Every subclass under `Exception`, that is not `RuntimeException`, are **Checked Exception**.
 
-## Throwing Exception
+## Throwing Custom Exception
 
 We can throw new `Exception` when we want to tell the user about a custom error.
 
