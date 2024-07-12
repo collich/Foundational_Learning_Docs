@@ -145,3 +145,20 @@ public staic void main(String[] args){
 }
 
 ```
+
+#### Things to note
+
+When finally not execute?
+
+Scenarios:
+
+1. When the `if...else` clause is not executed.
+2. When the `JVM` crashes.
+
+   - The way that a JVM can crash is within the catch block, we specify `System.exit(1);`.
+   - Be sure to not use `System.exit(1);` as it stops the `JVM`.
+
+Can we not include a certain keyword?
+
+- We cannot have just `try` block alone.
+- We can have just `try` and `finally`.
