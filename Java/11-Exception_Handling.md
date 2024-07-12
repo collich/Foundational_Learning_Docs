@@ -235,3 +235,37 @@ public Amount {
   }
 }
 ```
+
+- Whenever we want to use a `Check Exception`, we would need to `throw` it:
+
+```Java
+  public void add(Ammount that) throws Exception{
+    if (this.currency.equals(that.currency)){
+      throw new Exception("Currencies don't match!");
+    }
+  }
+```
+
+### Creation of Custom Exception
+
+We can just create a new `Class` that `extends` to the parent class `Exception`:
+
+- New Custom Exception:
+
+```Java
+class CurrenciesDoNotMatchException extends Exception{
+  public CurrenciesDoNotMatchException(String msg){
+    super(msg)
+  }
+}
+```
+
+- Method that uses Custom Exception:
+
+```Java
+  public void add(Ammount that) throws CurrenciesDoNotMatchException{
+    if (this.currency.equals(that.currency)){
+      throw new CurrenciesDoNotMatchException("Currencies don't match!");
+    }
+  }
+```
