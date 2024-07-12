@@ -162,3 +162,29 @@ Can we not include a certain keyword?
 
 - We cannot have just `try` block alone.
 - We can have just `try` and `finally`.
+
+### Checked vs Unchecked
+
+When we're handling exception, we will use the `try...catch` block. Whenever we want to do an unchecked Exception, we would use the keyword `throws`.
+
+- `Unchecked` Handling Exception:
+
+```Java
+public static void main(String[] args) throws InterruptedException{
+  Thread.sleep(); // The need for InterruptedException
+}
+```
+
+> Notice how we're telling Java to throw away the Exception.
+
+- `Checked` Handling Exception:
+
+```Java
+public static void main(String[] args){
+  try{
+    Thread.sleep();
+  } catch (Exception ex){
+    ex.printStackTrace();
+  }
+}
+```
