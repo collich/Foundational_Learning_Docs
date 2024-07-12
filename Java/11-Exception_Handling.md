@@ -269,3 +269,28 @@ class CurrenciesDoNotMatchException extends Exception{
     }
   }
 ```
+
+### Short hand for Try Catch - Try With Resource
+
+We can do it by doing what is specified in the template code:
+
+```Java
+public static void main(String[] args){
+  try(<Expression>){
+    <Block_of_Code>
+  }
+}
+```
+
+Example:
+
+```Java
+public static void main(String[] args){
+  try(Scanner scanner = new Scanner(System.in)){
+    int[] numbers = {12, 3, 4, 5}
+    int number = numbers[100];
+  }
+}
+```
+
+> When a class is being extended to an `AutoCloseable` Class, we can use this new `try` shorthand form.
