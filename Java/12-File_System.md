@@ -69,10 +69,10 @@ Files.find(Paths.get("."), 4, directoryMatcher);
 We can read a file by using `Path.get()` method:
 
 ```Java
-Path targetFile = Path.get("<File_Path>");
+Path targetFile = Paths.get("<File_Path>");
 
 // Example:
-Path targetFile = Path.get("./test.txt");
+Path targetFile = Paths.get("./test.txt");
 ```
 
 Using `Collections` method:
@@ -93,5 +93,30 @@ try(BufferReader rf = new BufferReader(new FileReader(targetFile))){
     while (readFileLine = rb.readLine() != null) {
         System.out.println(readFileLine);
     }
+}
+```
+
+## Writing to a file
+
+We can use the method `write()` under the `Files` Class to write to a file.
+
+```Java
+Path targetFile = Paths.get("./test.txt");
+
+List<String> list = List.of("Apple", "Boy", "Car");
+
+Files.write(targetFile, list);
+```
+
+OOP way - Using `BufferWriter` and `FileWriter`:
+
+```Java
+String targetFile = "./test.txt";
+try(BufferWriter wb = new BufferWriter(new FileWriter(targetFile))){
+    List<String> list = List.of("Apple", "Boy", "Car");
+    wb.write(list);
+    wb.close();
+} catch (IOException ex) {
+    ex.printStackTrace();
 }
 ```
