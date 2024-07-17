@@ -8,8 +8,10 @@ public class GameRunner {
     }
 
     public void run() {
-        // TODO Auto-generated method stub
-        // throw new UnsupportedOperationException("Unimplemented method 'run'");
         System.out.printf("Running game: %v", this.game);
+        game.up();
+        game.down();
+        game.left();
+        game.right();
     }
 }

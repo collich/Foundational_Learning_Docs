@@ -1,30 +1,30 @@
 package com.first_tut.learn_spring_framework.game;
 
-public class MarioGame implements GameConsole{
+public class SuperContra implements GameConsole{
 
     @Override
     public void up() {
         System.out.println("Jump");
     }
-
+    
     @Override
     public void down() {
-        System.out.println("Squat");
+        System.out.println("Down");
     }
-
+    
     @Override
     public void left() {
         System.out.println("Go Back");
     }
-
+    
     @Override
     public void right() {
-        System.out.println("Go Forward");
+        System.out.println("Forward");
     }
 
     @Override
     public void AButton() {
-        System.out.println("Pick up Item");
+        System.out.println("Shoot Bullets");
     }
-
+    
 }

@@ -5,4 +5,5 @@ interface GameConsole {
     public void down();
     public void left();
     public void right();
+    public void AButton();
 }
