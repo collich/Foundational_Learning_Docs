@@ -10,9 +10,14 @@ public class HelloWorldConfiguration {
     public String name(){
         return "Test Name";
     }
-
+    
     @Bean
     public int age(){
         return 420;
+    }
+
+    @Bean
+    public Person person(){
+        return new Person(this.name(), this.age());
     }
 }
