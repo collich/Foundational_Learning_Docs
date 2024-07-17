@@ -41,7 +41,7 @@ Files.walk(Paths.get("."), 2).forEach(System.out::println);
 
 We can filter using `Collections` methods or use the native `find()` method.
 
-`Collections`:
+`Collections` method:
 
 ```Java
 Files.walk(Paths.get("."), 4).filter(path -> String.valueOf(path).contains(".java"));
@@ -51,7 +51,7 @@ Predicate<? super Path> javaMatcher = path -> String.valueOf(path);
 Files.walk(Paths.get("."), 4).filter(javaMatcher).contains(".java");
 ```
 
-`Native`:
+`Native` method:
 
 ```Java
 BiPredicate<Path, BasicFileAttributes> javaMatcher = (path, attributes) -> String.valueOf(path).contains(".java");
@@ -62,4 +62,36 @@ Files.find(Paths.get("."), 4, javaMatcher);
 BiPredicate<Path, BasicFileAttributes> directoryMatcher = (path, attributes) -> attributes.isDirectory();
 
 Files.find(Paths.get("."), 4, directoryMatcher);
+```
+
+## Reading from File
+
+We can read a file by using `Path.get()` method:
+
+```Java
+Path targetFile = Path.get("<File_Path>");
+
+// Example:
+Path targetFile = Path.get("./test.txt");
+```
+
+Using `Collections` method:
+
+```Java
+Files.lines(targetFile).forEach(System.out::println);
+```
+
+> We can basically stream the output when using the Collections Method.
+
+We can also use `BufferReader` and `FileReader` together:
+
+```Java
+String targetFile = ".";
+
+try(BufferReader rf = new BufferReader(new FileReader(targetFile))){
+    String readFileLine;
+    while (readFileLine = rb.readLine() != null) {
+        System.out.println(readFileLine);
+    }
+}
 ```
