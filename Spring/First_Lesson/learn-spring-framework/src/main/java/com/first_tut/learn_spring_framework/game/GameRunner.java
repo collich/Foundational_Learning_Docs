@@ -1,7 +1,7 @@
 package com.first_tut.learn_spring_framework.game;
 
 public class GameRunner {
-    MarioGame game;
+    private MarioGame game;
 
     public GameRunner(MarioGame game){
         this.game = game;
