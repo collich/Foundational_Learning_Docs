@@ -1,10 +1,8 @@
-package com.second.learn_another;
+package com.second.learn_another.game;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-
-import com.second.learn_another.game.GameRunner;
 
 @Configuration
 @ComponentScan("com.second.learn_another.game")
