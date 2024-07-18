@@ -7,7 +7,7 @@ public class AppHelloWorldSpring {
         var helloWorldContext = new AnnotationConfigApplicationContext(HelloWorldConfiguration.class);
         // System.out.println(helloWorldContext.getBean("name"));
         // System.out.println(helloWorldContext.getBean("age"));
-        System.out.println(helloWorldContext.getBean("person"));
+        System.out.println(helloWorldContext.getBean(Person.class, "Alex", 49));
         helloWorldContext.close();
     }
 }

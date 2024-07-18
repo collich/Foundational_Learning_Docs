@@ -11,13 +11,13 @@ public class HelloWorldConfiguration {
         return "Test Name";
     }
     
-    @Bean
+    @Bean(name = "age")
     public int age(){
         return 420;
     }
 
     @Bean
-    public Person person(){
-        return new Person(this.name(), this.age());
+    public Person person(String personName, int personAge){
+        return new Person(personName, personAge);
     }
 }
