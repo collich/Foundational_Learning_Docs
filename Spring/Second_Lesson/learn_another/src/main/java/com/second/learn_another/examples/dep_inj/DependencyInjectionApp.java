@@ -1,7 +1,5 @@
 package com.second.learn_another.examples.dep_inj;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 // import java.util.Arrays;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -14,12 +12,17 @@ class BusinessLogic{
     Dependency1 dependency1;
     Dependency2 dependency2;
 
-    @Autowired
+    public BusinessLogic (Dependency1 dependency1, Dependency2 dependency2){
+        this.dependency1 = dependency1;
+        this.dependency2 = dependency2;
+    }
+
+    // @Autowired
     public void setDependency1(Dependency1 dependency1){
         this.dependency1 = dependency1;
     }
 
-    @Autowired
+    // @Autowired
     public void setDependency2(Dependency2 dependency2){
         this.dependency2 = dependency2;
     }
