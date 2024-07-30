@@ -24,7 +24,8 @@ public class CourseController {
         return Arrays.asList(
             new Course(1, "Statistics and C Programming", "Nicholas"),
             new Course(2, "Discrete Math and Ethics", "Karin"),
-            new Course(3, "ICT Fundamentals and Python Programming", "Malcomm")
+            new Course(3, "ICT Fundamentals and Python Programming", "Malcomm"),
+            new Course(4, "Digital Logic and Computer Systems", "Forest")
         );
     }
 }
