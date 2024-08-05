@@ -1,9 +1,13 @@
-package com.jpa_hibernate.springboot.course;
+package com.jpa_hibernate.springboot.learn_jpa_and_hibernate.course;
 
 public class Course {
     private long id;
     private String name;
     private String author;
+
+    public Course(){
+        
+    }
 
     public Course(long id, String name, String author) {
         this.id = id;
