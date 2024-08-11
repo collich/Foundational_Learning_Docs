@@ -1,5 +1,7 @@
 package com.jpa_hibernate.springboot.learn_jpa_and_hibernate.course.jpa;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.jpa_hibernate.springboot.learn_jpa_and_hibernate.course.Course;
@@ -26,5 +28,9 @@ public class CourseJpaRepository {
 
     public Course findById(long id){
         return entityManager.find(Course.class, id);
+    }
+
+    public List<Course> findAll(){
+        return entityManager.createQuery("SELECT c FROM Course c", Course.class).getResultList();
     }
 }
