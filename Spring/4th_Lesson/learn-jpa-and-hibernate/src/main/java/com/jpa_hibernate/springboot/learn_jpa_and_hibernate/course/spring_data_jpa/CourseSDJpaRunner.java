@@ -22,5 +22,7 @@ public class CourseSDJpaRunner implements CommandLineRunner{
         System.out.println(repo.findById(1l));
         System.out.println(repo.findById(2l));
         System.out.println(repo.findById(3l));
+        System.out.println(repo.findByAuthor("Salohcin"));
+        System.out.println(repo.findByName("Cloud"));
     }
 }
