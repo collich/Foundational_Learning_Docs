@@ -231,6 +231,8 @@ List.of(13, 15, 33, 67).stream().filter(e -> e%2 == 0).max((n1,n2) -> Integer.co
 // Output will be "0"
 ```
 
+> Can use `orElse()` method instead of `get()` method to have like a safety net of the end result.
+
 ## Method Reference
 
 **Method Reference** is a way that we can shorthand our code to make it more readable. We would also use the keyword `static` to give make it a `Method Reference`. The structure of how we can do Method References is:
