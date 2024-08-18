@@ -15,7 +15,7 @@
         Login Page
     </div>
     <div>
-        Welcome ${id}!
+        Welcome ${name}!
     </div>
 </body>
 </html>
