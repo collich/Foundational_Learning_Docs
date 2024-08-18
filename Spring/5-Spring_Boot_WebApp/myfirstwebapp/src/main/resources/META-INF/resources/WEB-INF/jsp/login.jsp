@@ -14,5 +14,8 @@
     <div>
         Login Page
     </div>
+    <div>
+        Welcome ${name}!
+    </div>
 </body>
 </html>
